@@ -13,9 +13,10 @@ export default () => (
             <div className="main">
                 <h1>Oops</h1>
                 <nav>
-                    <a href="https://instagram.com/bug_check" target="_blank" rel="noopener noreferrer">Instagram</a>
                     <Link prefetch href="/blog"><a>Blog</a></Link>
-                    <a href="https://runwithtfk.org/Profile/PublicPage/73521" target="_blank" rel="noopener noreferrer">NYRR Team for Kids</a>
+                    <a href="https://instagram.com/bug_check" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.strava.com/athletes/oops" target="_blank" rel="noopener noreferrer">Strava</a>
+                    <a href="https://runwithtfk.org/Profile/PublicPage/73521" target="_blank" rel="noopener noreferrer">Team for Kids</a>
                     <a href="/gpg.asc" download>GPG</a>
                 </nav>
             </div>

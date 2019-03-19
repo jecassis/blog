@@ -47,6 +47,12 @@ Figure.propTypes = {
     wide: PropTypes.string,
 };
 
+Figure.defaultProps = {
+    desc: '',
+    href: '',
+    wide: '',
+};
+
 export default Figure;
 
 

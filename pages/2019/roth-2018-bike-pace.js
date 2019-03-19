@@ -6,13 +6,14 @@ import P from '../../components/post/paragraph';
 import { Ref, FootNotes, Note } from '../../components/post/footnotes';
 import Figure, { Image } from '../../components/post/figure';
 import Title from '../../components/post/title';
-import withViews from '../../lib/with-views';
+// import withViews from '../../lib/with-views';
 
-export default withViews(({ views }) => (
+// export default withViews(({ views }) => (
+export default () => (
     <Post>
         <Head><title>Analyzing Challenge Roth 2018 Bike Pacing</title></Head>
         <Title>Analyzing Challenge Roth 2018 Bike Pacing</Title>
-        <Meta date="March 18, 2019" views={views} />
+        <Meta date="March 18, 2019" />  { /* views={views} /> */}
 
         <P>For Challenge Roth 2018, I estimated my FTP to be 228. It took me 6:21:40 to complete the 180km using a NP of 140<Ref id="1" />. The IF thus was 0.614 and the TSS was around 240.</P>
 
@@ -26,8 +27,6 @@ export default withViews(({ views }) => (
             <Image src="https://wpassets.trainingpeaks.com/wp-content/uploads/2017/01/howtocheatusingpowermeterinironman-2.png" />
         </Figure>
 
-        <iframe title="Challenge Roth 2018: Bike" height="405" width="590" frameBorder="0" allowTransparency="true" scrolling="no" src="https://www.strava.com/activities/2180900641/embed/befa3e44cf36a87e0b9a11737af2e695147e6754" />
-
         <FootNotes>
             <Note id="1">
                 See <a href="https://www.strava.com/activities/2180900641" target="_blank" rel="noopener noreferrer">ride data</a> on Strava.
@@ -37,4 +36,4 @@ export default withViews(({ views }) => (
             </Note>
         </FootNotes>
     </Post>
-));
+);

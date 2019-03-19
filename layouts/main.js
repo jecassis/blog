@@ -10,11 +10,8 @@ const Main = ({ children }) => (
             {' '}
             (<a href="https://github.com/jecassis/blog" target="_blank" rel="noopener noreferrer">src</a>)
         </div>
-
         {children}
-
         <Meta />
-
         <style jsx>
             {`
 .main {

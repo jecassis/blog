@@ -1,6 +1,7 @@
 {
     "name": "blog",
     "description": "A blog.",
+    "license": "UNLICENSED",
     "dependencies": {
         "comma-number": "^2.0.0",
         "firebase": "^5.9.0",
@@ -20,7 +21,6 @@
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4"
     },
-    "bin": "server.js",
     "scripts": {
         "dev": "next",
         "build": "next build",
@@ -33,7 +33,8 @@
             "document": true,
             "window": true,
             "process": true,
-            "localStorage": true
+            "localStorage": true,
+            "requestAnimationFrame": "true"
         },
         "rules": {
             "arrow-parens": ["error", "always"],
