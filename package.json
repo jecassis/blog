@@ -1,0 +1,65 @@
+{
+    "name": "blog",
+    "description": "A blog.",
+    "dependencies": {
+        "comma-number": "^2.0.0",
+        "firebase": "^5.9.0",
+        "isomorphic-fetch": "^2.2.1",
+        "load-script": "^1.0.0",
+        "next": "^8.0.3",
+        "nprogress": "^0.2.0",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4",
+        "react-youtube": "^7.9.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.15.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.12.4"
+    },
+    "bin": "server.js",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "NODE_ENV=production node server"
+    },
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "extends": "airbnb",
+        "globals": {
+            "document": true,
+            "window": true,
+            "process": true,
+            "localStorage": true
+        },
+        "rules": {
+            "arrow-parens": ["error", "always"],
+            "indent": ["error", 4],
+            "max-len": "off",
+            "no-unused-vars": "warn",
+            "object-curly-newline": ["error", {
+                "ObjectExpression": { "consistent": true },
+                "ObjectPattern": { "multiline": true },
+                "ImportDeclaration": "never",
+                "ExportDeclaration": { "multiline": true }
+            }],
+            "import/extensions": "off",
+            "import/no-extraneous-dependencies": "off",
+            "import/no-unresolved": "off",
+            "jsx-a11y/anchor-is-valid": "off",
+            "jsx-a11y/label-has-for": "off",
+            "react/destructuring-assignment": "off",
+            "react/jsx-filename-extension": "off",
+            "react/jsx-indent": ["error", 4],
+            "react/jsx-indent-props": ["error", 4],
+            "react/jsx-one-expression-per-line": "off",
+            "react/no-danger": "off"
+        }
+    },
+    "eslintIgnore": [
+        "*.min.js"
+    ]
+}
