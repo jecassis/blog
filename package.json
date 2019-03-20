@@ -11,11 +11,12 @@
         "nprogress": "^0.2.0",
         "react": "^16.8.4",
         "react-dom": "^16.8.4",
-        "react-youtube": "^7.9.0"
+        "react-youtube": "^7.9.0",
+        "request": "^2.88.0"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",
-        "eslint": "^5.15.0",
+        "eslint": "^5.15.3",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -24,7 +25,8 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start": "NODE_ENV=production node server"
+        "now-build": "next build",
+        "deploy": "now && now alias oops"
     },
     "eslintConfig": {
         "parser": "babel-eslint",

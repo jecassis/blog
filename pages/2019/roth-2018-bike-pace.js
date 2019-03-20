@@ -6,15 +6,13 @@ import P from '../../components/post/paragraph';
 import { Ref, FootNotes, Note } from '../../components/post/footnotes';
 import Figure, { Image } from '../../components/post/figure';
 import Title from '../../components/post/title';
-// import withViews from '../../lib/withViews';
+import withViews from '../../lib/withViews';
 
-// export default withViews(({ views }) => (
-export default () => (
+export default withViews(({ views }) => (
     <Post>
         <Head><title>Analyzing Challenge Roth 2018 Bike Pacing</title></Head>
         <Title>Analyzing Challenge Roth 2018 Bike Pacing</Title>
-        {/* <Meta date="March 18, 2019" views={views} /> */}
-        <Meta date="March 18, 2019" />
+        <Meta date="March 18, 2019" views={views} />
 
         <P>For Challenge Roth 2018, I estimated my FTP to be 228. It took me 6:21:40 to complete the 180km using a NP of 140<Ref id="1" />. The IF thus was 0.614 and the TSS was around 240.</P>
 
@@ -25,7 +23,7 @@ export default () => (
         <P>We&apos;ll just have to manage the effort better next time and not hold back as much on the bike.</P>
 
         <Figure desc="Bike TSS Chart">
-            <Image src="https://wpassets.trainingpeaks.com/wp-content/uploads/2017/01/howtocheatusingpowermeterinironman-2.png" />
+            <Image src="https://wpassets.trainingpeaks.com/wp-content/uploads/2017/01/howtocheatusingpowermeterinironman-2.png" width="85%" />
         </Figure>
 
         <FootNotes>
@@ -37,5 +35,4 @@ export default () => (
             </Note>
         </FootNotes>
     </Post>
-// ));
-);
+));

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import format from 'comma-number';
+import format from 'comma-number';
 
 export default class Meta extends Component {
     static propTypes = {
@@ -38,7 +38,7 @@ export default class Meta extends Component {
         return (
             <div>
                 {date}
-                {/* {' '}
+                {' '}
                 –
                 {' '}
                 {' '}
@@ -46,9 +46,9 @@ export default class Meta extends Component {
                     <span className={highlight && 'highlight'}>
                         {format(views)}
                         {' '}
-                        views
+                        {views === 1 ? 'view' : 'views' }
                     </span>
-                } */}
+                }
                 <style jsx>
                     {`
 div {
