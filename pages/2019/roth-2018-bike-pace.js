@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Post from '../../layouts/post';
+import Title from '../../components/post/title';
 import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import { Ref, FootNotes, Note } from '../../components/post/footnotes';
 import Figure, { Image } from '../../components/post/figure';
-import Title from '../../components/post/title';
 import withViews from '../../lib/withViews';
 
 export default withViews(({ views }) => (
