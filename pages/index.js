@@ -6,12 +6,12 @@ import Page from '../layouts/main';
 export default () => (
     <Page>
         <Head>
-            <title>Oops</title>
+            <title>Kernel Oops</title>
         </Head>
 
         <div className="home">
             <div className="main">
-                <h1>Oops</h1>
+                <h1>Kernel Oops</h1>
                 <nav>
                     <Link prefetch href="/blog"><a>Blog</a></Link>
                     <a href="https://instagram.com/bug_check" target="_blank" rel="noopener noreferrer">Instagram</a>
