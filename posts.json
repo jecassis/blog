@@ -1,6 +1,11 @@
 {
     "posts": [
         {
+            "id": "la-race-report",
+            "date": "March 26, 2019",
+            "title": "Los Angeles Marathon Race Report"
+        },
+        {
             "id": "run-screens",
             "date": "March 20, 2019",
             "title": "My Running Race Screens and Configuration"
