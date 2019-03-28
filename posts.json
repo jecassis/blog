@@ -3,22 +3,26 @@
         {
             "id": "la-race-report",
             "date": "March 26, 2019",
-            "title": "Los Angeles Marathon Race Report"
+            "title": "Los Angeles Marathon Race Report",
+            "summary": "Race report for the 2019 Los Angeles Marathon."
         },
         {
             "id": "run-screens",
             "date": "March 20, 2019",
-            "title": "My Running Race Screens and Configuration"
+            "title": "My Running Race Screens and Configuration",
+            "summary": "Running setup of a Garmin Forerunner GPS watch."
         },
         {
             "id": "la-estimate",
             "date": "March 19, 2019",
-            "title": "How I Decide How Fast to Run a Marathon"
+            "title": "How I Decide How Fast to Run a Marathon",
+            "summary": "Use of a training race to estimate marathon pace."
         },
         {
             "id": "roth-2018-bike-pace",
             "date": "March 18, 2019",
-            "title": "Analyzing Challenge Roth 2018 Bike Pacing"
+            "title": "Analyzing Challenge Roth 2018 Bike Pacing",
+            "summary": "Analysis of the 2018 Challenge Roth bike leg."
         }
     ]
 }
