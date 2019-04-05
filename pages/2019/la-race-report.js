@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Post from '../../layouts/post';
-import P from '../../components/post/paragraph';
 import { H2 } from '../../components/post/heading';
+import P from '../../components/post/paragraph';
 import Figure from '../../components/post/figure';
 import TABLE, { TR, TH, TD } from '../../components/post/table';
 import withViews from '../../lib/withViews';
