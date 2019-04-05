@@ -35,19 +35,6 @@
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4"
     },
-    "now": {
-        "version": 2,
-        "name": "oops",
-        "builds": [
-            { "src": "atom.js", "use": "@now/node" },
-            { "src": "gpg.js", "use": "@now/node" },
-            { "src": "next.config.js", "use": "@now/next" } 
-        ],
-        "routes": [
-            { "src": "^/gpg.asc", "dest": "gpg.js" },
-            { "src": "^/atom", "dest": "atom.js" }
-        ]
-    },    
     "eslintConfig": {
         "parser": "babel-eslint",
         "extends": "airbnb",
