@@ -25,6 +25,7 @@ FootNotes.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
+
 export const Ref = ({ id }) => (
     <a href={`#f${id}`} id={`s${id}`}>
         [{id}]
@@ -44,6 +45,7 @@ a {
 Ref.propTypes = {
     id: PropTypes.string.isRequired,
 };
+
 
 export const Note = ({ id, children }) => (
     <P>

@@ -58,31 +58,42 @@ export default Figure;
 
 const Image = ({ width, src }) => (
     <div>
-        <img width={width} src={src} />
-        <style jsx>{`
-      img {
-        max-width: 100%;
-        margin: 15px 0;
-      }
-    `}
+        {width ? (
+            <img width={width} src={src} />
+        ) : (
+            <img src={src} />
+        )}
+        <style jsx>
+            {`
+img {
+    max-width: 100%;
+    margin: 15px 0;
+}
+            `}
         </style>
     </div>
 );
 
 Image.propTypes = {
     src: PropTypes.node.isRequired,
-    width: PropTypes.string.isRequired,
+    width: PropTypes.string,
 };
+
+Image.defaultProps = {
+    width: '',
+};
+
 
 const Video = ({ src }) => (
     <div>
         <video autoPlay loop src={src} />
-        <style jsx>{`
-      video {
-        max-width: 100%;
-        margin: 15px 0;
-      }
-    `}
+        <style jsx>
+            {`
+video {
+    max-width: 100%;
+    margin: 15px 0;
+}
+            `}
         </style>
     </div>
 );

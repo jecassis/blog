@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { BASE_URI, SRC_URL } from '../lib/globals';
 import Meta from '../components/meta';
 
 const Main = ({ children }) => (
     <div className="main">
         <div className="logo">
-            <Link prefetch href="/"><a>oops.now.sh</a></Link>
+            <Link prefetch href="/"><a>{BASE_URI}</a></Link>
             {' '}
-            (<a href="https://github.com/jecassis/blog" target="_blank" rel="noopener noreferrer">src</a>)
+            (<a href={SRC_URL} target="_blank" rel="noopener noreferrer">src</a>)
         </div>
         {children}
         <Meta />

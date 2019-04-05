@@ -1,10 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import Post from '../../layouts/post';
 import Title from '../../components/post/title';
 import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import { H2 } from '../../components/post/heading';
+import Figure from '../../components/post/figure';
+import TABLE, { TR, TH, TD } from '../../components/post/table';
 import withViews from '../../lib/withViews';
 
 export default withViews(({ views }) => (
@@ -24,107 +27,88 @@ export default withViews(({ views }) => (
             Here are the official splits:
         </P>
 
-        <style jsx>
-            {`
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #ddd;
-}
-            `}
-        </style>
-        <table>
-            <tr>
-                <th>Distance</th>
-                <th>Time</th>
-                <th>Avg. Pace</th>
-                <th>Split Time</th>
-                <th>Split Pace (km)</th>
-                <th>Split Pace (mi)</th>
-            </tr>
-            <tr>
-                <td>5km</td>
-                <td>0:25:34</td>
-                <td>8:13/mi</td>
-                <td>0:25:34</td>
-                <td>05:07/km</td>
-                <td>08:14/mi</td>
-            </tr>
-            <tr>
-                <td>10km</td>
-                <td>0:51:03</td>
-                <td>8:13/mi</td>
-                <td>0:25:29</td>
-                <td>05:06/km</td>
-                <td>08:12/mi</td>
-            </tr>
-            <tr>
-                <td>15km</td>
-                <td>1:16:20</td>
-                <td>8:11/mi</td>
-                <td>0:25:17</td>
-                <td>05:03/km</td>
-                <td>08:08/mi</td>
-            </tr>
-            <tr>
-                <td>20km</td>
-                <td>1:41:39</td>
-                <td>8:11/mi</td>
-                <td>0:25:19</td>
-                <td>05:04/km</td>
-                <td>08:09/mi</td>
-            </tr>
-            <tr>
-                <td>25km</td>
-                <td>2:06:52</td>
-                <td>8:10/mi</td>
-                <td>0:25:13</td>
-                <td>05:03/km</td>
-                <td>08:07/mi</td>
-            </tr>
-            <tr>
-                <td>30km</td>
-                <td>2:32:41</td>
-                <td>8:11/mi</td>
-                <td>0:25:49</td>
-                <td>05:10/km</td>
-                <td>08:18/mi</td>
-            </tr>
-            <tr>
-                <td>35km</td>
-                <td>2:59:31</td>
-                <td>8:15/mi</td>
-                <td>0:26:50</td>
-                <td>05:22/km</td>
-                <td>08:38/mi</td>
-            </tr>
-            <tr>
-                <td>40km</td>
-                <td>3:26:42</td>
-                <td>8:19/mi</td>
-                <td>0:27:11</td>
-                <td>05:26/km</td>
-                <td>08:45/mi</td>
-            </tr>
-            <tr>
-                <td>42.195km</td>
-                <td>3:37:05</td>
-                <td>8:17/mi</td>
-                <td>0:10:23</td>
-                <td>04:44/km</td>
-                <td>07:37/mi</td>
-            </tr>
-        </table>
+        <TABLE>
+            <TR>
+                <TH>Distance</TH>
+                <TH>Time</TH>
+                <TH>Avg. Pace</TH>
+                <TH>Split Time</TH>
+                <TH>Split Pace (km)</TH>
+                <TH>Split Pace (mi)</TH>
+            </TR>
+            <TR>
+                <TD>5km</TD>
+                <TD>0:25:34</TD>
+                <TD>8:13/mi</TD>
+                <TD>0:25:34</TD>
+                <TD>05:07/km</TD>
+                <TD>08:14/mi</TD>
+            </TR>
+            <TR>
+                <TD>10km</TD>
+                <TD>0:51:03</TD>
+                <TD>8:13/mi</TD>
+                <TD>0:25:29</TD>
+                <TD>05:06/km</TD>
+                <TD>08:12/mi</TD>
+            </TR>
+            <TR>
+                <TD>15km</TD>
+                <TD>1:16:20</TD>
+                <TD>8:11/mi</TD>
+                <TD>0:25:17</TD>
+                <TD>05:03/km</TD>
+                <TD>08:08/mi</TD>
+            </TR>
+            <TR>
+                <TD>20km</TD>
+                <TD>1:41:39</TD>
+                <TD>8:11/mi</TD>
+                <TD>0:25:19</TD>
+                <TD>05:04/km</TD>
+                <TD>08:09/mi</TD>
+            </TR>
+            <TR>
+                <TD>25km</TD>
+                <TD>2:06:52</TD>
+                <TD>8:10/mi</TD>
+                <TD>0:25:13</TD>
+                <TD>05:03/km</TD>
+                <TD>08:07/mi</TD>
+            </TR>
+            <TR>
+                <TD>30km</TD>
+                <TD>2:32:41</TD>
+                <TD>8:11/mi</TD>
+                <TD>0:25:49</TD>
+                <TD>05:10/km</TD>
+                <TD>08:18/mi</TD>
+            </TR>
+            <TR>
+                <TD>35km</TD>
+                <TD>2:59:31</TD>
+                <TD>8:15/mi</TD>
+                <TD>0:26:50</TD>
+                <TD>05:22/km</TD>
+                <TD>08:38/mi</TD>
+            </TR>
+            <TR>
+                <TD>40km</TD>
+                <TD>3:26:42</TD>
+                <TD>8:19/mi</TD>
+                <TD>0:27:11</TD>
+                <TD>05:26/km</TD>
+                <TD>08:45/mi</TD>
+            </TR>
+            <TR>
+                <TD>42.195km</TD>
+                <TD>3:37:05</TD>
+                <TD>8:17/mi</TD>
+                <TD>0:10:23</TD>
+                <TD>04:44/km</TD>
+                <TD>07:37/mi</TD>
+            </TR>
+        </TABLE>
 
         <H2 id="pre-race">Pre-Race</H2>
         <P>
@@ -156,6 +140,10 @@ tr:nth-child(even) {
             Only scattered pockets of people here and there. Not that I care, just calling out differences between marathons.
         </P>
 
+        <Figure desc={(<span>Just past half way.</span>)}>
+            <img height="400" src="https://s3-us-west-2.amazonaws.com/oops-blog/20190324_090151_crop.jpg" alt="Mile 14" />
+        </Figure>
+
         <P>
             I tried to keep running a comfortable pace and WAY below my target marathon heart rate up through Downtown, Hollywood Blvd., Sunset Blvd.,
             Rodeo Dr., and Santa Monica Blvd. Taking in the sights and mentally preparing for the time when it would get much harder.
@@ -176,8 +164,12 @@ tr:nth-child(even) {
         </P>
 
         <P>
-            I broke an important rule of marathoning, I wore brand new shoes on race day. The shoe review is upcoming.
+            I broke an important rule of marathoning, I wore brand new shoes on race day. The <Link prefetch href="/2019/vaporfly-review"><a>shoe review</a></Link>.
         </P>
+
+        <Figure desc={(<span>Looking for the team.</span>)}>
+            <img height="400" src="https://s3-us-west-2.amazonaws.com/oops-blog/20190324_105908_crop.jpg" alt="After Race" />
+        </Figure>
 
         <P>
             In conclusion, it looks like I&apos;ve built a good base for Roth.
