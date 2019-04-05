@@ -1,22 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { INDEX_TITLE, SUBTITLE, INSTAGRAM_URL, STRAVA_URL, TFK_URL } from '../lib/globals';
 import Page from '../layouts/main';
 
 export default () => (
     <Page>
         <Head>
-            <title>Kernel Oops</title>
+            <title>{INDEX_TITLE}</title>
         </Head>
 
         <div className="home">
             <div className="main">
-                <h1>Kernel Oops</h1>
+                <h1>{INDEX_TITLE}</h1>
                 <nav>
-                    <Link prefetch href="/blog"><a>Blog</a></Link>
-                    <a href="https://instagram.com/bug_check" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://www.strava.com/athletes/oops" target="_blank" rel="noopener noreferrer">Strava</a>
-                    <a href="https://runwithtfk.org/Profile/PublicPage/73521" target="_blank" rel="noopener noreferrer">Team for Kids</a>
+                    <Link prefetch href="/blog"><a>{SUBTITLE}</a></Link>
+                    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href={STRAVA_URL} target="_blank" rel="noopener noreferrer">Strava</a>
+                    <a href={TFK_URL} target="_blank" rel="noopener noreferrer">Team for Kids</a>
                     <a href="/gpg.asc" download>GPG</a>
                 </nav>
             </div>

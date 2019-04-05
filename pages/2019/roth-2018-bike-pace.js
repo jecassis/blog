@@ -1,19 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
 import Post from '../../layouts/post';
-import Title from '../../components/post/title';
-import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import { Ref, FootNotes, Note } from '../../components/post/footnotes';
 import Figure, { Image } from '../../components/post/figure';
 import withViews from '../../lib/withViews';
 
-export default withViews(({ views }) => (
-    <Post>
-        <Head><title>Analyzing Challenge Roth 2018 Bike Pacing</title></Head>
-        <Title>Analyzing Challenge Roth 2018 Bike Pacing</Title>
-        <Meta date="March 18, 2019" views={views} />
-
+export default withViews(({ postId, views }) => (
+    <Post postId={postId} views={views}>
         <P>For Challenge Roth 2018, I estimated my FTP to be 228. It took me 6:21:40 to complete the 180km using a NP of 140<Ref id="1" />. The IF thus was 0.614 and the TSS was around 240.</P>
 
         <P>Looking at the chart below<Ref id="2" /> for a 6:20:00ish time it has become clear that I left way too much time on the table. A conservative ride should have been closer to 5% NP higher.</P>

@@ -1,21 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import Post from '../../layouts/post';
-import Title from '../../components/post/title';
-import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import { H2 } from '../../components/post/heading';
 import Figure from '../../components/post/figure';
 import TABLE, { TR, TH, TD } from '../../components/post/table';
 import withViews from '../../lib/withViews';
 
-export default withViews(({ views }) => (
-    <Post>
-        <Head><title>Los Angeles Marathon Race Report</title></Head>
-        <Title>Los Angeles Marathon Race Report</Title>
-        <Meta date="March 26, 2019" views={views} />
-
+export default withViews(({ postId, views }) => (
+    <Post postId={postId} views={views}>
         <P>
             The LA run from Dodger Stadium to the Pier in Santa Monica is in the bag.
             The run went well and ran light and easy for the first 20 miles or 32 kilometers.
@@ -140,7 +133,7 @@ export default withViews(({ views }) => (
             Only scattered pockets of people here and there. Not that I care, just calling out differences between marathons.
         </P>
 
-        <Figure desc={(<span>Just past half way.</span>)}>
+        <Figure desc={<span>Just past half way.</span>}>
             <img height="400" src="https://s3-us-west-2.amazonaws.com/oops-blog/20190324_090151_crop.jpg" alt="Mile 14" />
         </Figure>
 
@@ -167,7 +160,7 @@ export default withViews(({ views }) => (
             I broke an important rule of marathoning, I wore brand new shoes on race day. The <Link prefetch href="/2019/vaporfly-review"><a>shoe review</a></Link>.
         </P>
 
-        <Figure desc={(<span>Looking for the team.</span>)}>
+        <Figure desc={<span>Looking for the team.</span>}>
             <img height="400" src="https://s3-us-west-2.amazonaws.com/oops-blog/20190324_105908_crop.jpg" alt="After Race" />
         </Figure>
 

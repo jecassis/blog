@@ -1,8 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
 import Post from '../../layouts/post';
-import Title from '../../components/post/title';
-import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import { H2, H3 } from '../../components/post/heading';
 import NL, { LI as LIn } from '../../components/post/numbers-list';
@@ -12,12 +9,8 @@ import HR from '../../components/post/hr';
 // import Quote from '../../components/post/quote';
 import withViews from '../../lib/withViews';
 
-export default withViews(({ views }) => (
-    <Post>
-        <Head><title>My Running Race Screens and Configuration</title></Head>
-        <Title>My Running Race Screens and Configuration</Title>
-        <Meta date="March 20, 2019" views={views} />
-
+export default withViews(({ postId, views }) => (
+    <Post postId={postId} views={views}>
         <P>My GPS watch is a Garmin Forerunner 935 in case you were wondering.</P>
 
         <P>But what is on my GPS watch when I race and how do I use it?</P>

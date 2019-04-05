@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const H = ({ id, level = 2, fontSize = 16, children }) => (
+const H = ({ id, level, fontSize, children }) => (
     <div>
         {
             React.createElement(`h${level}`,
@@ -39,9 +39,14 @@ div:hover a, span:hover a {
 
 H.propTypes = {
     id: PropTypes.string.isRequired,
-    level: PropTypes.number.isRequired,
-    fontSize: PropTypes.number.isRequired,
+    level: PropTypes.number,
+    fontSize: PropTypes.number,
     children: PropTypes.node.isRequired,
+};
+
+H.defaultProps = {
+    level: 2,
+    fontSize: 16,
 };
 
 const H2 = H;

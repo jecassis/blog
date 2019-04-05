@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 
 const TABLE = ({ children }) => (
     <table>
-        {children}
-        <style jsx>
-            {`
+        <tbody>
+            {children}
+            <style jsx>
+                {`
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
-            `}
-        </style>
+                `}
+            </style>
+        </tbody>
     </table>
 );
 

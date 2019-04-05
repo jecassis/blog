@@ -1,20 +1,13 @@
 import React from 'react';
-import Head from 'next/head';
 import Post from '../../layouts/post';
-import Title from '../../components/post/title';
-import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import { H2 } from '../../components/post/heading';
 import Figure, { Image } from '../../components/post/figure';
 import Quote from '../../components/post/quote';
 import withViews from '../../lib/withViews';
 
-export default withViews(({ views }) => (
-    <Post>
-        <Head><title>Checklists</title></Head>
-        <Title>Checklists</Title>
-        <Meta date="March 19, 2019" views={views} />
-
+export default withViews(({ postId, views }) => (
+    <Post postId={postId} views={views}>
         <P>What follows is a very brief summary discussion on how I prepare for a marathon race.</P>
 
         <P>Note that this level of obsession is not required, however it does help free as much mental bandwidth as possible to focus most of it into running.</P>

@@ -1,25 +1,18 @@
 import React from 'react';
-import Head from 'next/head';
 import Post from '../../layouts/post';
-import Title from '../../components/post/title';
-import Meta from '../../components/post/meta';
 import P from '../../components/post/paragraph';
 import Figure, { Image } from '../../components/post/figure';
 import Grid, { Column } from '../../components/post/grid';
 import withViews from '../../lib/withViews';
 
-export default withViews(({ views }) => (
-    <Post>
-        <Head><title>Nike Vaporfly 4% Flyknit Review</title></Head>
-        <Title>Nike Vaporfly 4% Flyknit Review</Title>
-        <Meta date="April 4, 2019" views={views} />
-
+export default withViews(({ postId, views }) => (
+    <Post postId={postId} views={views}>
         <P>
             The shoes I wore for the Los Angeles Marathon was the Nike Vaporfly 4% Flyknit in Deep Royal Blue/Red Orbit colorway.
             Much has been written about this shoe and the ZoomX foam and carbon plate. Let me add my voice to the noise.
         </P>
 
-        <Figure desc={(<span>The profile shot.</span>)}>
+        <Figure desc={<span>The profile shot.</span>}>
             <Image src="https://s3-us-west-2.amazonaws.com/oops-blog/vaporfly-4-flyknit-running-shoe-v7G3FB_crop.png" />
         </Figure>
 

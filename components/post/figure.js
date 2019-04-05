@@ -41,7 +41,7 @@ p {
 );
 
 Figure.propTypes = {
-    desc: PropTypes.string,
+    desc: PropTypes.node,
     href: PropTypes.string,
     children: PropTypes.node.isRequired,
     wide: PropTypes.string,

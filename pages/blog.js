@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Head from 'next/head';
+import { SUBTITLE } from '../lib/globals';
 import Page from '../layouts/main';
 import { posts } from '../posts';
 
 export default () => (
     <Page>
         <Head>
-            <title>Blog</title>
+            <title>{SUBTITLE}</title>
         </Head>
         <div className="posts">
             {
