@@ -43,7 +43,7 @@ export default class Meta extends Component {
                 {' '}
                 {' '}
                 {
-                    <span className={highlight && 'highlight'}>
+                    <span className={highlight ? 'highlight' : undefined}>
                         {format(views)}
                         {' '}
                         {views === 1 ? 'view' : 'views' }
