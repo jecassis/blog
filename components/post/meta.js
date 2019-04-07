@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import format from 'comma-number';
+
+const MetaDiv = styled.div`
+    margin-bottom: 20px;
+    color: #777;
+
+    .highlight {
+        animation-name: highlight;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes highlight {
+        from { background-color: yellow; }
+        to { background-color: #fff; }
+    }
+`;
 
 export default class Meta extends Component {
     static propTypes = {
@@ -36,7 +53,7 @@ export default class Meta extends Component {
         const { date, views } = this.props;
         const { highlight } = this.state;
         return (
-            <div>
+            <MetaDiv>
                 {date}
                 {' '}
                 –
@@ -49,26 +66,7 @@ export default class Meta extends Component {
                         {views === 1 ? 'view' : 'views' }
                     </span>
                 }
-                <style jsx>
-                    {`
-div {
-    margin-bottom: 20px;
-    color: #777;
-}
-
-.highlight {
-    animation-name: highlight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes highlight {
-    from { background-color: yellow; }
-    to { background-color: #fff; }
-}
-                    `}
-                </style>
-            </div>
+            </MetaDiv>
         );
     }
 }

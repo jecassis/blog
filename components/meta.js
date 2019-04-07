@@ -1,21 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import NProgress from 'nprogress';
 import Router from 'next/router';
+import { createGlobalStyle } from 'styled-components';
+import NProgress from 'nprogress';
 
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-export default () => (
-    <div>
-        <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link href="/atom" type="application/atom+xml" rel="alternate" title="Oops" />
-        </Head>
-
-        <style jsx global>
-            {`
+const GlobalStyle = createGlobalStyle`
 * {
     margin: 0;
     box-sizing: border-box;
@@ -61,7 +54,14 @@ a:hover {
     opacity: 1.0;
     transform: rotate(3deg) translate(0px, -4px);
 }
-            `}
-        </style>
+`;
+
+export default () => (
+    <div>
+        <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link href="/atom" type="application/atom+xml" rel="alternate" title="Kernel Oops" />
+        </Head>
+        <GlobalStyle />
     </div>
 );

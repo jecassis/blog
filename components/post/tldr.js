@@ -1,27 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const TLDR = ({ children }) => (
-    <div className="wrap">
-        <b>tl;DR:</b>
-        {' '}
-        <div className="content">{children}</div>
-        <style jsx>
-            {`
-.wrap {
+const Wrap = styled.div`
     margin-bottom: 25px;
     padding: 15px;
     background: #eee;
     line-height: 20px;
-}
-  
-.content {
+`;
+
+const Content = styled.div`
     display: inline;
     font-style: oblique;
-}
-            `}
-        </style>
-    </div>
+`;
+
+const TLDR = ({ children }) => (
+    <Wrap>
+        <b>tl;DR:</b>
+        {' '}
+        <Content>{children}</Content>
+    </Wrap>
 );
 
 TLDR.propTypes = {

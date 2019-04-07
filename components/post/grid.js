@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import styled from 'styled-components';
+
+const Row = styled.div`
+    display: flex;
+`;
 
 const Grid = ({ children }) => (
-    <div className="row">
+    <Row>
         {children}
-        <style jsx>
-            {`
-.row {
-    display: flex;
-}
-            `}
-        </style>
-    </div>
+    </Row>
 );
 
 Grid.propTypes = {
@@ -22,24 +19,19 @@ Grid.propTypes = {
 export default Grid;
 
 
-const Column = ({ children, id, width, height }) => (
-    <div className={classNames('column', { [`${id}`]: id })}>
-        {children}
-        <style jsx>
-            {`
-.column {
-    flex: ${id ? `calc(${width}/${height})` : '50%'};
+const Col = styled.div`
+    flex: ${(props) => (props.id ? `calc(${props.width}/${props.height})` : '50%')};
     padding: 5px;
-}
 
-@media (max-width: 500px) {
-    .column {
+    @media (max-width: 500px) {
         width: 100%;
     }
-}
-            `}
-        </style>
-    </div>
+`;
+
+const Column = ({ children, id, width, height }) => (
+    <Col id={id} width={width} height={height}>
+        {children}
+    </Col>
 );
 
 Column.propTypes = {

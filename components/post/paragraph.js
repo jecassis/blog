@@ -1,23 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const P = ({ children }) => (
-    <p>
-        {children}
-        <style jsx>
-            {`
-p {
+const P = styled.p`
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 20px;
-}
-            `}
-        </style>
-    </p>
+`;
+
+const Paragraph = ({ children }) => (
+    <P>{children}</P>
 );
 
-P.propTypes = {
+Paragraph.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default P;
+export default Paragraph;

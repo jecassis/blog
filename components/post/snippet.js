@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Snippet = ({ children }) => (
-    <pre>
-        <code>{children}</code>
-        <style jsx>
-            {`
-pre {
+const Pre = styled.pre`
     line-height: 20px;
     margin-bottom: 20px;
     font-size: 12px;
-}
+`;
 
-code {
+const Code = styled.code`
     color: #999;
-}
-            `}
-        </style>
-    </pre>
+`;
+
+const Snippet = ({ children }) => (
+    <Pre>
+        <Code>{children}</Code>
+    </Pre>
 );
 
 Snippet.propTypes = {

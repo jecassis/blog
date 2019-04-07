@@ -1,28 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Quote = ({ by, children }) => (
-    <blockquote>
-        <p>
-            {children}
-            <br />
-            {by && `– ${by}`}
-        </p>
-        <style jsx>
-            {`
-blockquote {
+const Blockquote = styled.blockquote`
     margin: 30px 0;
     color: #9B9B9B;
     font-style: oblique;
     font-size: 12px;
-}
+`;
 
-p {
+const P = styled.p`
     line-height: 24px;
-}
-            `}
-        </style>
-    </blockquote>
+`;
+
+const Quote = ({ by, children }) => (
+    <Blockquote>
+        <P>
+            {children}
+            <br />
+            {by && `– ${by}`}
+        </P>
+    </Blockquote>
 );
 
 Quote.propTypes = {

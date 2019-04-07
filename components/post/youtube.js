@@ -1,5 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 import YouTube from 'react-youtube';
+
+const Wrap = styled.div`
+    margin: 15px 0;
+`;
 
 const withDefault = (props) => (
     Object.assign({}, props, {
@@ -10,14 +15,7 @@ const withDefault = (props) => (
 );
 
 export default (props) => (
-    <div>
+    <Wrap>
         <YouTube {...withDefault(props)} />
-        <style jsx>
-            {`
-div {
-    margin: 15px 0;
-}
-            `}
-        </style>
-    </div>
+    </Wrap>
 );
