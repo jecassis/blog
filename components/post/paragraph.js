@@ -8,9 +8,7 @@ const P = styled.p`
     margin-bottom: 20px;
 `;
 
-const Paragraph = ({ children }) => (
-    <P>{children}</P>
-);
+const Paragraph = ({ children }) => <P>{children}</P>;
 
 Paragraph.propTypes = {
     children: PropTypes.node.isRequired,

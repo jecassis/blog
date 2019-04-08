@@ -20,7 +20,6 @@ UL.propTypes = {
 
 export default UL;
 
-
 const Li = styled.li`
     margin-bottom: 5px;
     padding-left: 20px;
@@ -28,15 +27,13 @@ const Li = styled.li`
 
     ::before {
         content: '-';
-        color: #ABABAB;
+        color: #ababab;
         position: absolute;
         margin-left: -20px;
     }
 `;
 
-const LI = ({ children }) => (
-    <Li>{children}</Li>
-);
+const LI = ({ children }) => <Li>{children}</Li>;
 
 LI.propTypes = {
     children: PropTypes.node.isRequired,

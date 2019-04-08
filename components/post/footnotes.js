@@ -3,28 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import P from './paragraph';
 
-const Foot = styled.div`
-    ::before {
-        width: 200px;
-        content: ' ';
-        margin: auto;
-        border-top: 1px solid #ccc;
-        padding-top: 40px;
-        display: block;
-        margin-top: 40px;
-    }
-`;
-
-export const FootNotes = ({ children }) => (
-    <Foot>
-        {children}
-    </Foot>
-);
-
-FootNotes.propTypes = {
-    children: PropTypes.node.isRequired,
-};
-
 const RefA = styled.a`
     top: -5px;
     font-size: 10px;
@@ -40,6 +18,23 @@ Ref.propTypes = {
     id: PropTypes.string.isRequired,
 };
 
+const Foot = styled.div`
+    ::before {
+        width: 200px;
+        content: ' ';
+        margin: auto;
+        border-top: 1px solid #ccc;
+        padding-top: 40px;
+        display: block;
+        margin-top: 40px;
+    }
+`;
+
+export const FootNotes = ({ children }) => <Foot>{children}</Foot>;
+
+FootNotes.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 const NoteA = styled.a`
     text-decoration: none;
@@ -47,8 +42,8 @@ const NoteA = styled.a`
 
 export const Note = ({ id, children }) => (
     <P>
-        {id}.
-        {' '}
+        {id}
+        {'. '}
         <NoteA href={`#s${id}`} id={`f${id}`}>^</NoteA>
         {' '}
         {children}

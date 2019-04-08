@@ -35,7 +35,8 @@
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.12.4"
+        "eslint-plugin-react": "^7.12.4",
+        "prettier": "^1.16.4"
     },
     "engines": {
         "node": ">= 8.0.0"
@@ -81,5 +82,22 @@
     },
     "eslintIgnore": [
         "*.min.js"
-    ]
+    ],
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "arrowParens": "always",
+        "rangeStart": 0,
+        "requirePragma": false,
+        "insertPragma": false,
+        "proseWrap": "preserve",
+        "htmlWhitespaceSensitivity": "strict",
+        "endOfLine": "lf"
+    }
 }

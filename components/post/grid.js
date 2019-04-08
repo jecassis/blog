@@ -18,7 +18,6 @@ Grid.propTypes = {
 
 export default Grid;
 
-
 const Col = styled.div`
     flex: ${(props) => (props.id ? `calc(${props.width}/${props.height})` : '50%')};
     padding: 5px;

@@ -21,7 +21,6 @@ TABLE.propTypes = {
 
 export default TABLE;
 
-
 const Tr = styled.tr`
     :nth-child(even) {
         background-color: #ddd;
@@ -29,7 +28,9 @@ const Tr = styled.tr`
 `;
 
 const TR = ({ children }) => (
-    <Tr>{children}</Tr>
+    <Tr>
+        {children}
+    </Tr>
 );
 
 TR.propTypes = {
@@ -38,16 +39,13 @@ TR.propTypes = {
 
 export { TR };
 
-
 const Th = styled.th`
     border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
 `;
 
-const TH = ({ children }) => (
-    <Th>{children}</Th>
-);
+const TH = ({ children }) => <Th>{children}</Th>;
 
 TH.propTypes = {
     children: PropTypes.node.isRequired,
@@ -55,16 +53,13 @@ TH.propTypes = {
 
 export { TH };
 
-
 const Td = styled.td`
     border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
 `;
 
-const TD = ({ children }) => (
-    <Td>{children}</Td>
-);
+const TD = ({ children }) => <Td>{children}</Td>;
 
 TD.propTypes = {
     children: PropTypes.node.isRequired,

@@ -25,9 +25,7 @@ const Li = styled.li`
     line-height: 24px;
 `;
 
-const LI = ({ children }) => (
-    <Li>{children}</Li>
-);
+const LI = ({ children }) => <Li>{children}</Li>;
 
 LI.propTypes = {
     children: PropTypes.node.isRequired,

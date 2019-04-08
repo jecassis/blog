@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import format from 'comma-number';
+
+const highlights = keyframes`
+    from {
+        background-color: yellow;
+    }
+
+    to {
+        background-color: #fff;
+    }
+`;
 
 const MetaDiv = styled.div`
     margin-bottom: 20px;
     color: #777;
 
     .highlight {
-        animation-name: highlight;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes highlight {
-        from { background-color: yellow; }
-        to { background-color: #fff; }
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+        animation: ${highlights} 1s ease 0s 1 normal forwards running;
     }
 `;
 
@@ -36,7 +40,7 @@ export default class Meta extends Component {
         if (this.props.views !== nextProps.views) {
             if (this.raf) return;
             if (this.state.highlight) {
-                // reset the animation
+                // Reset the animation.
                 this.setState({ highlight: false }, () => {
                     this.raf = requestAnimationFrame(() => {
                         this.raf = null;
@@ -55,15 +59,10 @@ export default class Meta extends Component {
         return (
             <MetaDiv>
                 {date}
-                {' '}
-                –
-                {' '}
-                {' '}
+                {' -  '}
                 {
                     <span className={highlight ? 'highlight' : undefined}>
-                        {format(views)}
-                        {' '}
-                        {views === 1 ? 'view' : 'views' }
+                        {format(views)} {views === 1 ? 'view' : 'views'}
                     </span>
                 }
             </MetaDiv>

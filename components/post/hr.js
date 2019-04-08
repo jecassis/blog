@@ -6,7 +6,7 @@ const HR = styled.div`
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-    
+
     ::after {
         content: '***';
         text-align: center;
@@ -14,6 +14,4 @@ const HR = styled.div`
     }
 `;
 
-export default () => (
-    <HR />
-);
+export default () => <HR />;

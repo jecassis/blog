@@ -24,7 +24,9 @@ const Post = ({ children, postId, views }) => {
     const { title, date } = posts.filter(({ id }) => postId.replace(/^\d{4}-/, '') === id)[0]; // Replace the year and '-';
     return (
         <Page>
-            <Head><title>{title}</title></Head>
+            <Head>
+                <title>{title}</title>
+            </Head>
             <Article>
                 <Title>{title}</Title>
                 <Meta date={date} views={views} />

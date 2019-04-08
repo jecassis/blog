@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const H = styled.div`
     margin: 25px 0;
-    font-family: Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, 'Lucida Grande', sans-serif;
 
     a {
         visibility: hidden;
@@ -31,14 +31,14 @@ const Span = styled.span`
 
 const Heading = ({ id, level, fontSize, children }) => (
     <H>
-        {
-            createElement(`h${level}`,
-                { style: { fontWeight: 500, fontSize } },
-                <Span>
-                    <a href={`#${id}`} id={id}>#</a>
-                </Span>,
-                children)
-        }
+        {createElement(
+            `h${level}`,
+            { style: { fontWeight: 500, fontSize } },
+            <Span>
+                <a href={`#${id}`} id={id}>#</a>
+            </Span>,
+            children,
+        )}
     </H>
 );
 

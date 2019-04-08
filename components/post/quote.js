@@ -4,22 +4,22 @@ import styled from 'styled-components';
 
 const Blockquote = styled.blockquote`
     margin: 30px 0;
-    color: #9B9B9B;
+    color: #9b9b9b;
     font-style: oblique;
     font-size: 12px;
-`;
 
-const P = styled.p`
-    line-height: 24px;
+    p {
+        line-height: 24px;
+    }
 `;
 
 const Quote = ({ by, children }) => (
     <Blockquote>
-        <P>
+        <p>
             {children}
             <br />
             {by && `– ${by}`}
-        </P>
+        </p>
     </Blockquote>
 );
 

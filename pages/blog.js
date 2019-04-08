@@ -13,6 +13,10 @@ const PostDiv = styled.div`
     @media (max-width: 500px) {
         margin-bottom: 15px;
     }
+
+    a {
+        text-decoration: none;
+    }
 `;
 
 const PostDate = styled.span`
@@ -32,14 +36,10 @@ const PostDate = styled.span`
     }
 `;
 
-const A = styled.a`
-    text-decoration: none;
-`;
-
 const Post = ({ id, date, title }) => (
     <PostDiv>
         <PostDate>{date}</PostDate>
-        <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}><A>{title}</A></Link>
+        <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}><a>{title}</a></Link>
     </PostDiv>
 );
 
@@ -55,11 +55,9 @@ export default () => (
             <title>{SUBTITLE}</title>
         </Head>
         <div className="posts">
-            {
-                posts.map(({ id, date, title }) => (
-                    <Post id={id} key={id} date={date} title={title} />
-                ))
-            }
+            {posts.map(({ id, date, title }) => (
+                <Post id={id} key={id} date={date} title={title} />
+            ))}
         </div>
     </Page>
 );

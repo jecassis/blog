@@ -15,17 +15,17 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    font: 13px Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font: 13px Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
 }
 
 a {
-    color: #22BAD9;
+    color: #22bad9;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 a:hover {
     color: #fff;
-    background: #22BAD9;
+    background: #22bad9;
     text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ a:hover {
 }
 
 #nprogress .bar {
-    background: #22BAD9;
+    background: #22bad9;
     position: fixed;
     z-index: 1031;
     top: 0;
@@ -50,7 +50,7 @@ a:hover {
     right: 0px;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px #22BAD9, 0 0 5px #22BAD9;
+    box-shadow: 0 0 10px #22bad9, 0 0 5px #22bad9;
     opacity: 1.0;
     transform: rotate(3deg) translate(0px, -4px);
 }

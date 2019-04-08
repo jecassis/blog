@@ -6,8 +6,8 @@ const Fig = styled.div`
     text-align: center;
     margin-bottom: 20px;
 
-    ${(props) => props.wide && (css`
-    background: #F2F2F2;
+    ${(props) => props.wide && css`
+    background: #f2f2f2;
     position: relative;
 
     ::before {
@@ -16,10 +16,10 @@ const Fig = styled.div`
         left: -1000px;
         height: 100%;
         position: absolute;
-        background: #F2F2F2;
+        background: #f2f2f2;
         z-index: -1;
     }
-    `)}
+    `}
 `;
 
 const P = styled.p`
@@ -32,8 +32,14 @@ const P = styled.p`
 
 const Figure = ({ desc, href, children, wide }) => (
     <Fig wide={wide}>
-        {href ? <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> : children}
-        {desc && (<P>{desc}</P>)}
+        {href ? (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+                {children}
+            </a>
+        ) : (
+            children
+        )}
+        {desc && <P>{desc}</P>}
     </Fig>
 );
 
@@ -52,7 +58,6 @@ Figure.defaultProps = {
 
 export default Figure;
 
-
 const Img = styled.img`
     max-width: 100%;
     margin: 15px 0;
@@ -66,11 +71,7 @@ const Image = ({ width, src, alt }) => (
 
 Image.propTypes = {
     src: PropTypes.node.isRequired,
-    width: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.instanceOf(undefined),
-    ]),
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(undefined)]),
     alt: PropTypes.string,
 };
 
@@ -78,7 +79,6 @@ Image.defaultProps = {
     width: undefined,
     alt: '',
 };
-
 
 const Vid = styled.video`
     max-width: 100%;
