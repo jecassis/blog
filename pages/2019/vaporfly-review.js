@@ -75,7 +75,7 @@ export default withViews(({ postId, views }) => (
             Traction felt fine and the outsole didn&apos;t show too much wear over the marathon distance. However, the shoe does tranfer pavement irregularities a bit.
         </P>
 
-        <H2>Build Quality and Feel</H2>
+        <H2 id="qa">Build Quality and Feel</H2>
         <P>
             The sockliner is taped or glued onto the shoe. When I first put them on, I could hear the glue between sockliner and midsole sticking and unsticking. This eventually went away but not a good first impression for a premium shoe.
         </P>
@@ -108,14 +108,14 @@ export default withViews(({ postId, views }) => (
         <H2 id="conclusions">Conclusions</H2>
         <P>
             The most important questions (and answers) I wanted to find out in my experiment are:
-            <UL>
-                <LI>Do they feel good? Not the biggest fan of the flyknit upper but it didn&apos;t hinder my running except for the extreme foot slippage on the downhills.</LI>
-                <LI>Did they make me run faster? I didn&apos;t go slow, so I guess that&apos;s good, but far from PR pace. So the verdict is still out on whether I&apos;m getting my 4% energy efficiency.</LI>
-                <LI>Would I wear them again? Yes, for races that fit a specific profile, i.e. <em>flat</em> or uphill, good tarmac, and fast.</LI>
-                <LI>Do you like their look? Fuck yeah, the Deep Royal Blue/Red Orbit color combination looks awesome!</LI>
-                <LI>Are they worth $250? Fuck no!!!!!</LI>
-            </UL>
         </P>
+        <UL>
+            <LI>Do they feel good? Not the biggest fan of the flyknit upper but it didn&apos;t hinder my running except for the extreme foot slippage on the downhills.</LI>
+            <LI>Did they make me run faster? I didn&apos;t go slow, so I guess that&apos;s good, but far from PR pace. So the verdict is still out on whether I&apos;m getting my 4% energy efficiency.</LI>
+            <LI>Would I wear them again? Yes, for races that fit a specific profile, i.e. <em>flat</em> or uphill, good tarmac, and fast.</LI>
+            <LI>Do you like their look? Fuck yeah, the Deep Royal Blue/Red Orbit color combination looks awesome!</LI>
+            <LI>Are they worth $250? Fuck no!!!!!</LI>
+        </UL>
 
         <FootNotes>
             <Note id="1">
