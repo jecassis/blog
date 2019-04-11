@@ -54,7 +54,7 @@
             "window": true,
             "process": true,
             "localStorage": true,
-            "requestAnimationFrame": "true"
+            "requestAnimationFrame": true
         },
         "rules": {
             "arrow-parens": ["error", "always"],
