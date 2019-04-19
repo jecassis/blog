@@ -19,18 +19,18 @@ const Logo = styled.div`
     @media (max-width: 500px) {
         padding-bottom: 20px;
     }
-`;
-
-const A = styled.a`
-    text-decoration: none;
+    
+    a {
+        text-decoration: none;
+    }
 `;
 
 const Main = ({ children }) => (
     <MainDiv>
         <Logo>
-            <Link prefetch href="/"><A>{BASE_URI}</A></Link>
+            <Link prefetch href="/"><a>{BASE_URI}</a></Link>
             {' '}
-            (<A href={SRC_URL} target="_blank" rel="noopener noreferrer">src</A>)
+            (<a href={SRC_URL} target="_blank" rel="noopener noreferrer">src</a>)
         </Logo>
         {children}
         <Meta />
