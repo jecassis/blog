@@ -5,9 +5,10 @@
     "homepage": "https://github.com/jecassis/blog",
     "bugs": "https://github.com/jecassis/blog/issues",
     "license": "MIT",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "author": "Kernel Oops <KernelOops@outlook.com> (https://oops.now.sh/)",
     "main": "index.js",
+    "repository": "github:jecassis/blog",
     "scripts": {
         "dev": "next",
         "build": "next build",
@@ -15,25 +16,35 @@
         "deploy": "now && now alias oops"
     },
     "dependencies": {
-        "classnames": "^2.2.6",
         "comma-number": "^2.0.0",
-        "firebase": "^5.9.3",
+        "firebase": "^5.10.0",
         "isomorphic-fetch": "^2.2.1",
         "load-script": "^1.0.0",
-        "next": "^8.0.4",
+        "next": "^8.1.0",
         "nprogress": "^0.2.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-youtube": "^7.9.0",
-        "request": "^2.88.0"
+        "request": "^2.88.0",
+        "styled-components": "^4.2.0"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",
+        "babel-plugin-styled-components": "^1.10.0",
         "eslint": "^5.16.0",
         "eslint-config-airbnb": "^17.1.0",
-        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-import": "^2.17.2",
         "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.12.4"
+        "eslint-plugin-react": "^7.12.4",
+        "prettier": "^1.17.0"
+    },
+    "engines": {
+        "node": ">= 8.0.0"
+    },
+    "private": true,
+    "babel": {
+        "presets": ["next/babel"],
+        "plugins": ["styled-components"]
     },
     "eslintConfig": {
         "parser": "babel-eslint",
@@ -43,7 +54,7 @@
             "window": true,
             "process": true,
             "localStorage": true,
-            "requestAnimationFrame": "true"
+            "requestAnimationFrame": true
         },
         "rules": {
             "arrow-parens": ["error", "always"],
@@ -71,5 +82,22 @@
     },
     "eslintIgnore": [
         "*.min.js"
-    ]
+    ],
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "arrowParens": "always",
+        "rangeStart": 0,
+        "requirePragma": false,
+        "insertPragma": false,
+        "proseWrap": "preserve",
+        "htmlWhitespaceSensitivity": "strict",
+        "endOfLine": "lf"
+    }
 }

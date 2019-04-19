@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Code = ({ children }) => (
-    <code>
-        {children}
-        <style jsx>
-            {`
-code {
+const Source = styled.code`
     color: #666;
     font-family: monospace;
-}
-            `}
-        </style>
-    </code>
+`;
+
+const Code = ({ children }) => (
+    <Source>
+        {children}
+    </Source>
 );
 
 Code.propTypes = {

@@ -1,43 +1,46 @@
-/* eslint-disable jsx-a11y/media-has-caption, jsx-a11y/alt-text */
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 
-const Figure = ({ desc, href, children, wide }) => (
-    <div className={wide && 'wide'}>
-        {href ? <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> : children}
-        {desc && (<p>{desc}</p>)}
-        <style jsx>
-            {`
-div {
+const Fig = styled.div`
     text-align: center;
     margin-bottom: 20px;
-}
 
-p {
+    ${(props) => props.wide && css`
+    background: #f2f2f2;
+    position: relative;
+
+    ::before {
+        width: 10000%;
+        content: '';
+        left: -1000px;
+        height: 100%;
+        position: absolute;
+        background: #f2f2f2;
+        z-index: -1;
+    }
+    `}
+`;
+
+const P = styled.p`
     font-size: 13px;
     color: #999;
     text-align: center;
     font-style: oblique;
     display: block;
-}
+`;
 
-.wide {
-    background: #F2F2F2;
-    position: relative;
-}
-
-.wide::before {
-    width: 10000%;
-    content: '';
-    left: -1000px;
-    height: 100%;
-    position: absolute;
-    background: #F2F2F2;
-    z-index: -1;
-}
-            `}
-        </style>
-    </div>
+const Figure = ({ desc, href, children, wide }) => (
+    <Fig wide={wide}>
+        {href ? (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+                {children}
+            </a>
+        ) : (
+            children
+        )}
+        {desc && <P>{desc}</P>}
+    </Fig>
 );
 
 Figure.propTypes = {
@@ -55,46 +58,36 @@ Figure.defaultProps = {
 
 export default Figure;
 
-
-const Image = ({ width, src }) => (
-    <div>
-        {width ? (
-            <img width={width} src={src} />
-        ) : (
-            <img src={src} />
-        )}
-        <style jsx>
-            {`
-img {
+const Img = styled.img`
     max-width: 100%;
     margin: 15px 0;
-}
-            `}
-        </style>
+`;
+
+const Image = ({ width, src, alt }) => (
+    <div>
+        <Img width={width} src={src} alt={alt} />
     </div>
 );
 
 Image.propTypes = {
     src: PropTypes.node.isRequired,
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(undefined)]),
+    alt: PropTypes.string,
 };
 
 Image.defaultProps = {
-    width: '',
+    width: undefined,
+    alt: '',
 };
 
+const Vid = styled.video`
+    max-width: 100%;
+    margin: 15px 0;
+`;
 
 const Video = ({ src }) => (
     <div>
-        <video autoPlay loop src={src} />
-        <style jsx>
-            {`
-video {
-    max-width: 100%;
-    margin: 15px 0;
-}
-            `}
-        </style>
+        <Vid autoPlay loop src={src} />
     </div>
 );
 

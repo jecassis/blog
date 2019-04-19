@@ -1,21 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const TABLE = ({ children }) => (
-    <table>
-        <tbody>
-            {children}
-            <style jsx>
-                {`
-table {
-    font-family: arial, sans-serif;
+const Table = styled.table`
     border-collapse: collapse;
     width: 100%;
-}
-                `}
-            </style>
+`;
+
+const TABLE = ({ children }) => (
+    <Table>
+        <tbody>
+            {children}
         </tbody>
-    </table>
+    </Table>
 );
 
 TABLE.propTypes = {
@@ -24,18 +21,16 @@ TABLE.propTypes = {
 
 export default TABLE;
 
+const Tr = styled.tr`
+    :nth-child(even) {
+        background-color: #ddd;
+    }
+`;
 
 const TR = ({ children }) => (
-    <tr>
+    <Tr>
         {children}
-        <style jsx>
-            {`
-tr:nth-child(even) {
-    background-color: #ddd;
-}
-            `}
-        </style>
-    </tr>
+    </Tr>
 );
 
 TR.propTypes = {
@@ -44,21 +39,13 @@ TR.propTypes = {
 
 export { TR };
 
-
-const TH = ({ children }) => (
-    <th>
-        {children}
-        <style jsx>
-            {`
-th {
+const Th = styled.th`
     border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
-}
-            `}
-        </style>
-    </th>
-);
+`;
+
+const TH = ({ children }) => <Th>{children}</Th>;
 
 TH.propTypes = {
     children: PropTypes.node.isRequired,
@@ -66,21 +53,13 @@ TH.propTypes = {
 
 export { TH };
 
-
-const TD = ({ children }) => (
-    <td>
-        {children}
-        <style jsx>
-            {`
-td {
+const Td = styled.td`
     border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
-}
-            `}
-        </style>
-    </td>
-);
+`;
+
+const TD = ({ children }) => <Td>{children}</Td>;
 
 TD.propTypes = {
     children: PropTypes.node.isRequired,

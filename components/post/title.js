@@ -1,29 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Title = ({ children }) => (
-    <h1>
-        <a href="#">{children}</a>
-        <style jsx>
-            {`
-h1 {
+const H1 = styled.h1`
     font: 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 500;
     margin-bottom: 10px;
-}
+`;
 
-a {
-        color: #FF001F;
-        text-decoration: none;
-}
+const A = styled.a`
+    color: #FF001F;
+    text-decoration: none;
 
-a:hover {
-    background-color: #FF001F;
-    color: #fff;
-}
-            `}
-        </style>
-    </h1>
+    :hover {
+        color: #fff;
+        background-color: #FF001F;
+    }
+`;
+
+const Title = ({ children }) => (
+    <H1>
+        <A href="#">{children}</A>
+    </H1>
 );
 
 Title.propTypes = {
