@@ -60,11 +60,11 @@ export default class Meta extends Component {
             <MetaDiv>
                 {date}
                 {' -  '}
-                {
+                {views !== 0 ? (
                     <span className={highlight ? 'highlight' : undefined}>
                         {format(views)} {views === 1 ? 'view' : 'views'}
                     </span>
-                }
+                ) : ('')}
             </MetaDiv>
         );
     }
