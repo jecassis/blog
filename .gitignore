@@ -1,4 +1,5 @@
 /node_modules/
 /.next/
+/.now/
 /dist/
 package-lock.json

@@ -39,7 +39,9 @@ const PostDate = styled.span`
 const Post = ({ id, date, title }) => (
     <PostDiv>
         <PostDate>{date}</PostDate>
-        <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}><a>{title}</a></Link>
+        <Link href={`/${new Date(date).getFullYear()}/${id}`}>
+            <a>{title}</a>
+        </Link>
     </PostDiv>
 );
 

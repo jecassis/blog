@@ -157,7 +157,7 @@ export default withViews(({ postId, views }) => (
         </P>
 
         <P>
-            I broke an important rule of marathoning, I wore brand new shoes on race day. The <Link prefetch href="/2019/vaporfly-review"><a>shoe review</a></Link>.
+            I broke an important rule of marathoning, I wore brand new shoes on race day. The <Link href="/2019/vaporfly-review"><a>shoe review</a></Link>.
         </P>
 
         <Figure desc={<span>Looking for the team.</span>}>

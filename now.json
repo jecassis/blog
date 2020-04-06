@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "name": "oops",
     "builds": [
         { "src": "atom.js", "use": "@now/node" },
         { "src": "gpg.js", "use": "@now/node" },
@@ -10,5 +9,5 @@
         { "src": "^/gpg.asc", "dest": "gpg.js" },
         { "src": "^/atom", "dest": "atom.js" }
     ],
-    "regions": ["pdx", "sfo"]
+    "regions": ["pdx"]
 }

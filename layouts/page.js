@@ -28,7 +28,7 @@ const Logo = styled.div`
 const Main = ({ children }) => (
     <MainDiv>
         <Logo>
-            <Link prefetch href="/"><a>{BASE_URI}</a></Link>
+            <Link href="/"><a>{BASE_URI}</a></Link>
             {' '}
             (<a href={SRC_URL} target="_blank" rel="noopener noreferrer">src</a>)
         </Logo>
