@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
-import { SUBTITLE } from '../lib/globals';
-import Page from '../layouts/page';
-import { posts } from '../posts';
+import { SUBTITLE } from '@/lib/globals';
+import Page from '@/layouts/page';
+import * as data from '../posts.json';
 
 const PostDiv = styled.div`
     margin-bottom: 10px;
@@ -51,15 +51,17 @@ Post.propTypes = {
     title: PropTypes.string.isRequired,
 };
 
-export default () => (
+const Blog = () => (
     <Page>
         <Head>
             <title>{SUBTITLE}</title>
         </Head>
         <div className="posts">
-            {posts.map(({ id, date, title }) => (
+            {data.posts.map(({ id, date, title }) => (
                 <Post id={id} key={id} date={date} title={title} />
             ))}
         </div>
     </Page>
 );
+
+export default Blog;

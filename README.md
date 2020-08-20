@@ -13,24 +13,24 @@ It is forked from the blog of [Guillermo Rauch](https://github.com/rauchg/blog).
 To run this blog:
 
 ```console
-$ npm install
-$ npm run dev
+$ yarn install
+$ yarn dev
 ```
 
 Then head to `http://localhost:3000` on the browser.
 
 ### Deployment
 
-To deploy this blog to the cloud install [now-cli](https://zeit.co/download):
+To deploy this blog to the cloud install [Vercel CLI](https://vercel.com/download):
 
 ```console
-$ npm install -g now
+$ yarn global add vercel
 ```
 
 Then run:
 
 ```console
-$ now
+$ vercel
 > No existing credentials found. Please log in: <email>
 √ Email confirmed
 Congratulations! You are now logged in. In order to deploy something, run `now`.
@@ -39,17 +39,17 @@ $ now
 ? Which scope do you want to deploy to? <scope>
 ? Found project “<scope>/oops”. Link to it? [Y/n] y
 ? Linked to <scope>/oops (created .now and added it to .gitignore)
-? Inspect: https://zeit.co/<scope>/oops/5z1gj1osa
+? Inspect: https://vercel.com/<scope>/oops/<unique_id>
 ? Preview: https://oops.<scope>.now.sh
-? To deploy to production, run `now --prod`
+? To deploy to production, run `vercel --prod`
 ```
 
 This returns a new instance of the blog at a new, immutable URL. After verification, set up an alias targetting the production URL `oops.now.sh`:
 
 ```console
-$ now alias oops.<scope>.now.sh oops.now.sh
-> Assigning alias oops.now.sh to deployment oops-5z1gj1osa.now.sh
-> Success! https://oops.now.sh now points to https://oops-5z1gj1osa.now.sh
+$ vercel alias oops.<scope>.now.sh oops.now.sh
+> Assigning alias oops.now.sh to deployment oops-<unique_id>.now.sh
+> Success! https://oops.now.sh now points to https://oops-<unique_id>.now.sh
 ```
 
 ## Architecture

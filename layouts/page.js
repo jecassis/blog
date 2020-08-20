@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { BASE_URI, SRC_URL } from '../lib/globals';
-import Meta from '../components/meta';
+import { BASE_URI, SRC_URL } from '@/lib/globals';
+import Meta from '@/components/meta';
 
 const MainDiv = styled.div`
     padding: 25px 50px;

@@ -15,7 +15,7 @@ export default withViews(({ postId, views }) => (
 
         <P>But what is on my GPS watch when I race and how do I use it?</P>
 
-        <P>Let me explain each screen and the fields. for my &quot;Run Race&quot; profile.</P>
+        <P>Let me explain each screen and the fields for my &quot;Run Race&quot; profile.</P>
 
         <H2 id="screens">The Screens</H2>
         <H3 id="main">Main Screen</H3>

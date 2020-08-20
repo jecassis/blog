@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import styled, { createGlobalStyle } from 'styled-components';
-import Title from '../components/post/title';
-import Meta from '../components/post/meta';
-import { posts } from '../posts';
-import Page from './page';
-
-const GlobalStyle = createGlobalStyle`
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-`;
+import styled from 'styled-components';
+import Page from '@/layouts/page';
+import Title from '@/components/post/title';
+import Meta from '@/components/post/meta';
+import * as data from '../posts.json';
 
 const Article = styled.article`
     max-width: 650px;
@@ -21,7 +14,7 @@ const Article = styled.article`
 `;
 
 const Post = ({ children, postId, views }) => {
-    const { title, date } = posts.filter(({ id }) => postId.replace(/^\d{4}-/, '') === id)[0]; // Replace the year and '-';
+    const { title, date } = data.posts.filter(({ id }) => postId.replace(/^\d{4}-/, '') === id)[0]; // Replace the year and '-';
     return (
         <Page>
             <Head>
@@ -32,7 +25,6 @@ const Post = ({ children, postId, views }) => {
                 <Meta date={date} views={views} />
                 {children}
             </Article>
-            <GlobalStyle />
         </Page>
     );
 };

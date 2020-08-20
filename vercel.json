@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "name": "oops",
+    "builds": [
+        { "src": "atom.js", "use": "@vercel/node" },
+        { "src": "pgp.js", "use": "@vercel/node" },
+        { "src": "next.config.js", "use": "@now/next" },
+        { "src": "index.js", "use": "now-micro",  "config": { "maxLambdaSize": "10mb" } }
+    ],
+    "routes": [
+        { "src": "^/pgp.asc", "dest": "pgp.js" },
+        { "src": "^/atom", "dest": "atom.js" }
+    ],
+    "regions": ["pdx"]
+}
