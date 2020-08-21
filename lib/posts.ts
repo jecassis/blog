@@ -4,14 +4,14 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = join(process.cwd(), 'posts');
+const postsDirectory = () => join(process.cwd(), 'posts');
 
 const getMatter = (fileName: string, directory: string = '') => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.mdx?$/, '');
 
     // Read markdown file as string
-    const fullPath = join(postsDirectory, directory, fileName);
+    const fullPath = join(postsDirectory(), directory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
@@ -24,9 +24,9 @@ const getMatter = (fileName: string, directory: string = '') => {
 };
 
 const getAllPostsData = () => {
-    const fileNames = fs.readdirSync(postsDirectory);
+    const fileNames = fs.readdirSync(postsDirectory());
     const allPostsData = fileNames.map((fileName) => {
-        const fullPath = join(postsDirectory, fileName);
+        const fullPath = join(postsDirectory(), fileName);
         if (fs.lstatSync(fullPath).isDirectory()) {
             // Get file names under /posts/<year>
             const nested = fs.readdirSync(fullPath);
@@ -64,7 +64,8 @@ export const getAllPostIds = () => {
 
 export const getPostData = async (id: string) => {
     const year = id.match(/(\d{4})-(.*?)$/);
-    const fullPath = year !== null ? join(postsDirectory, year[1], `${year[2]}.md`) : join(postsDirectory, `${id}.md`);
+    const fullPath =
+        year !== null ? join(postsDirectory(), year[1], `${year[2]}.md`) : join(postsDirectory(), `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section

@@ -1,3 +1,11 @@
 {
-  "version": 2
+  "version": 2,
+  "functions": {
+    "api/atom.ts": {
+      "includeFiles": "posts/**"
+    },
+    "api/pgp.ts": {
+      "includeFiles": "public/pgp.asc"
+    }
+  }
 }

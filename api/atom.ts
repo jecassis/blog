@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-const { BASE_URI, INDEX_TITLE, SUBTITLE, AUTHOR_NAME, AUTHOR_EMAIL } = require('@/lib/globals');
-const { getSortedPostsData: posts } = require('@/lib/posts');
+import { NextApiRequest, NextApiResponse } from 'next';
+import { BASE_URI, INDEX_TITLE, SUBTITLE, AUTHOR_NAME, AUTHOR_EMAIL } from '../lib/globals';
+import { getSortedPostsData as posts } from '../lib/posts';
 
 const max = 10; // Maximum returned posts
 
