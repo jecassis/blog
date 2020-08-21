@@ -9,9 +9,10 @@ import Date from '@/components/date';
 import styles from '@/styles/utils.module.css';
 
 const Post = ({
+    id,
     postData,
-    views,
 }: {
+    id: string;
     postData: {
         id: string;
         title: string;
@@ -19,24 +20,23 @@ const Post = ({
         summary: string;
         contentHtml: string;
     };
-    views: number;
 }) => {
-    const [viewed, setViewed] = useState<number>(0);
+    const [views, setViews] = useState<number>(0);
     const [highlight, setHighlight] = useState(false);
 
     useEffect(() => {
-        setHighlight(true);
-        // const timeoutId = setTimeout(() => {
-        //     setHighlight(false);
-        // }, 600);
+        fetch(`${DB_URL}/views/${id}.json`)
+            .then((r) => r.json())
+            .then((data) => setViews(data))
+            .catch((err) => console.error('Fetch mount error', err));
+    }, []);
 
-        // return () => {
-        //     clearTimeout(timeoutId);
-        // };
+    useEffect(() => {
+        setHighlight(true);
+
         // Register a view asynchronously.
         fetch(`https://${VIEWS_URI}/?id=${encodeURIComponent(`${postData.id}`)}`, { method: 'POST' })
             .then((r) => r.json())
-            .then((data) => setViewed(data))
             .catch((err) => console.error('View save error', err));
     }, [views]);
 
@@ -72,15 +72,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const postData = await getPostData(params.id as string);
-    const views = await fetch(`${DB_URL}/views/${params.id}.json`)
-        .then((r) => r.json())
-        .catch((err) => console.error('Fetch mount error', err));
-
     return {
         props: {
             id: params.id,
             postData,
-            views: views ? views : null,
         },
     };
 };
