@@ -1,4 +1,4 @@
-import db from '@/lib/db-admin';
+import db from '@/lib/db';
 
 export const increment = (id: string) => {
     const ref = db.ref('views').child(id);

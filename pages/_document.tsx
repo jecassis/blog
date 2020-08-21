@@ -45,16 +45,16 @@ export default class Doc extends Document {
                     {/* <link href="https://oops-blog.s3-us-west-2.amazonaws.com/AvenirLTStd-Light.woff2" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
                     {/* <link href="https://oops-blog.s3-us-west-2.amazonaws.com/AvenirLTStd-Roman.woff2" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
                     {/* <link href="https://oops-blog.s3-us-west-2.amazonaws.com/AvenirLTStd-Heavy.woff2" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
-                    <link href="/site.webmanifest" rel="manifest" importance="low" />
-                    <link href="/humans.txt" rel="author" type="text/plain" importance="low" />
+                    <link href="/site.webmanifest" rel="manifest" /* importance="low" */ />
+                    <link href="/humans.txt" rel="author" type="text/plain" /* importance="low" */ />
                     <link href="/atom" rel="alternate" type="application/atom+xml" title={INDEX_TITLE} />
                     <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
                     {/* <link href="/favicon-194x194.png" rel="icon" type="image/png" sizes="194x194" /> */}
                     <link href="/android-chrome-192x192.png" rel="icon" type="image/png" sizes="192x192" />
                     <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
                     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-                    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#3c4556" importance="low" />
-                    <link href="/apple-touch-icon.png" rel="apple-touch-icon" importance="low" />
+                    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#3c4556" /* importance="low" */ />
+                    <link href="/apple-touch-icon.png" rel="apple-touch-icon" /* importance="low" */ />
                     <link href={`https://${BASE_URI}/`} rel="canonical" />
                     {/* <link href="https://oops-blog.s3-us-west-2.amazonaws.com/profile.png" rel="preload" as="image" /> */}
                 </Head>
