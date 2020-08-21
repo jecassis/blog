@@ -46,10 +46,6 @@ We sent an email to <email>. Please follow the steps provided inside it and make
 √ Email confirmed
 Congratulations! You are now logged in.
 $ vercel
-> No existing credentials found. Please log in: <email>
-√ Email confirmed
-Congratulations! You are now logged in. In order to deploy something, run `now`.
-$ now
 ? Set up and deploy “/path/to/blog”? [Y/n] y
 ? Which scope do you want to deploy to? <scope>
 ? Found project <scope>/<other>”. Link to it? [Y/n] n
@@ -57,6 +53,11 @@ $ now
 ? What’s your project’s name? oops
 ? In which directory is your code located? ./
 ? Linked to <scope>/oops (created .vercel and added it to .gitignore)
+Auto-detected Project Settings (Next.js):
+- Build Command: `npm run build` or `next build`
+- Output Directory: Next.js default
+- Development Command: next dev --port $PORT
+? Want to override the settings? [y/N] n
 ? Inspect: https://vercel.com/<scope>/oops/<unique_id>
 ? Production: https://oops.vercel.app [copied to clipboard]
 ? Deployed to production. Run `vercel --prod` to overwrite later.
@@ -73,8 +74,13 @@ Vercel CLI 19.2.0
 ? To deploy to production (oops.vercel.app), run `vercel --prod`
 ```
 
-To deploy additional changes to production:
+To deploy into production:
 
 ```console
 $ vercel --prod
+? Inspect: https://vercel.com/<scope>/oops/<unique_id>
+? Production: https://oops.<scope>.vercel.app [copied to clipboard]
+$ vercel alias oops.<scope>.vercel.app oops.now.sh
+> Assigning alias oops.now.sh to deployment oops-<unique_id>.vercel.app
+> Success! https://oops.now.sh now points to https://oops-<unique_id>.vercel.app
 ```

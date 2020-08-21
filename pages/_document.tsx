@@ -13,7 +13,7 @@ export default class Doc extends Document {
             <Html lang="en">
                 <Head>
                     <meta charSet="utf-8" />
-                    <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self' data:; img-src 'self' data: https://oops-blog.s3-us-west-2.amazonaws.com; connect-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com https://oops-views.now.sh; child-src 'self'; frame-src 'self'; form-action 'self'; prefetch-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; block-all-mixed-content; upgrade-insecure-requests" />
+                    <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self' data:; img-src 'self' data: https://oops-blog.s3-us-west-2.amazonaws.com https://wpassets.trainingpeaks.com; connect-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com https://oops-views.now.sh; child-src 'self'; frame-src 'self'; form-action 'self'; prefetch-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; block-all-mixed-content; upgrade-insecure-requests" />
                     <meta name="theme-color" content="#3c4556" />
                     <meta name="application-name" content={INDEX_TITLE} />
                     <meta name="apple-mobile-web-app-title" content="Oops" />

@@ -50,7 +50,7 @@ Crowd support was virtually non-existent from the start until about 25km into th
 Only scattered pockets of people here and there. Not that I care, just calling out differences between marathons.
 
 <div class="figure">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/20190324_090151_crop.jpg" style="height:400px" alt="Mile 14">
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/20190324_090151_crop.jpg" style="height:400px" alt="Mile 14">
 <p class="desc">Just past half way</p>
 </div>
 
@@ -70,7 +70,7 @@ Overall, not too bad.
 I broke an important rule of marathoning, I wore brand new shoes on race day. The <a href="/post/2019-vaporfly-review">shoe review</a>.
 
 <div class="figure">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/20190324_105908_crop.jpg" style="height:400px" alt="After the race">
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/20190324_105908_crop.jpg" style="height:400px" alt="After the race">
 <p class="desc">Looking for the team</p>
 </div>
 

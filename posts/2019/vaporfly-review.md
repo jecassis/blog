@@ -8,7 +8,7 @@ The shoes I wore for the Los Angeles Marathon was the Nike Vaporfly 4% Flyknit i
 Much has been written about this shoe and the ZoomX foam and carbon fiber plate. Let me add my voice to the noise.
 
 <div class="figure">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/vaporfly-4-flyknit-running-shoe-v7G3FB_crop.png" style="width:100%;height:auto;vertical-align:middle">
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/vaporfly-4-flyknit-running-shoe-v7G3FB_crop.png" style="width:100%;height:auto;vertical-align:middle">
 <p class="desc">The profile shot</p>
 </div>
 
@@ -67,16 +67,16 @@ The flyknit upper feels extremely tight when first trying them on.
 
 <div class="row">
 <div class="col" id="pct1">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_019782.jpg" alt="Mile 4" />
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/3017_019782.jpg" alt="Mile 4" />
 </div>
 <div class="col" id="pct2">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456791.jpg" alt="Spring" />
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/3017_456791.jpg" alt="Spring" />
 </div>
 <div class="col" id="pct3">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456792.jpg" alt="Pronation" />
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/3017_456792.jpg" alt="Pronation" />
 </div>
 <div class="col" id="pct4">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_698144.jpg" alt="Mile 24" />
+<img src="https://oops-blog.s3-us-west-2.amazonaws.com/3017_698144.jpg" alt="Mile 24" />
 </div>
 </div>
 
