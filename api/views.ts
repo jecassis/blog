@@ -8,7 +8,7 @@ type Data = {
 
 export default async (req: NextApiRequest, res: NextApiResponse<Data | string>) => {
     const orig = req.headers.origin;
-    if (/https:\/\/oops(.*\.)?now\.sh/.test(orig)) {
+    if (/https:\/\/oops(.*\.)?(?:now\.sh|vercel\.com)/.test(orig)) {
         res.setHeader('Access-Control-Allow-Origin', orig);
         res.setHeader('Access-Control-Allow-Methods', 'POST');
     }

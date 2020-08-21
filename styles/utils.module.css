@@ -1,10 +1,10 @@
-.heading2Xl {
+/* .heading2Xl {
     font-size: 2.5rem;
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: -0.05rem;
     margin: 1rem 0;
-}
+} */
 
 .headingXl {
     font-size: 2rem;
@@ -29,10 +29,10 @@
     margin: 1rem 0;
 }
 
-.headingMd {
+/* .headingMd {
     font-size: 1.2rem;
     line-height: 1.5;
-}
+} */
 
 /* .borderCircle {
     border-radius: 9999px;
@@ -60,11 +60,31 @@
     margin: 0 0 1.25rem;
 }
 
-.lightText {
-    color: #666;
-}
-
 .article {
     margin: auto;
     font-size: 14px;
+}
+
+@keyframes highlights {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #ff0;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+
+div.lightText {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+div.lightText .highlight {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+    animation: highlights 1.25s ease 0.2s 1 normal forwards running;
 }

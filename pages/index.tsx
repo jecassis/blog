@@ -25,10 +25,6 @@ const Index = () => (
                     <a href="/api/pgp" download>
                         PGP
                     </a>
-                    
-                    <a href="/api/atom" download>
-                        Atom
-                    </a>
                 </nav>
             </main>
         </div>
