@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
-import { VIEWS_URI, DB_URL } from './globals';
+// import axios from 'axios';
+import { /* VIEWS_URI, */ DB_URL } from '../../lib/globals';
 // import db from './db';
 
 const dbUrl = `${DB_URL}/views`;
@@ -17,18 +17,18 @@ const withViews = (fn) => (
             // Fetch views
             // const ref = db.ref('views').child(id);
             // const views = await ref.once('value');
-            let views = 0;
-            axios.get(`${dbUrl}/${id}.json`)
-                .then((res) => { views = res.data; })
-                .catch((err) => console.error('Fetch initial error', err));
+            // let views = 0;
+            // axios.get(`${dbUrl}/${id}.json`)
+            //     .then((res) => { views = res.data; })
+            //     .catch((err) => console.error('Fetch initial error', err));
 
-            // Register a view asynchronously.
-            axios.get(`https://${VIEWS_URI}/?id=${encodeURIComponent(id)}`)
-                .catch((err) => console.error('View save error', err));
+            // // Register a view asynchronously.
+            // axios.get(`https://${VIEWS_URI}/?id=${encodeURIComponent(id)}`)
+            //     .catch((err) => console.error('View save error', err));
 
             return {
                 postId: id,
-                views, // views: views.val(),
+                // views, // views: views.val(),
             };
         }
 
@@ -45,9 +45,9 @@ const withViews = (fn) => (
         componentDidMount() {
             const { postId } = this.props;
             // db.ref('views').child(postId).on('value', this.onViews);
-            axios.get(`${dbUrl}/${postId}.json`)
-                .then((res) => this.onViews(res.data))
-                .catch((err) => console.error('Fetch mount error', err));
+            // axios.get(`${dbUrl}/${postId}.json`)
+            //     .then((res) => this.onViews(res.data))
+            //     .catch((err) => console.error('Fetch mount error', err));
         }
 
         // componentWillUnmount() {

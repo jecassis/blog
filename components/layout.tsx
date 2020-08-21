@@ -1,61 +1,65 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import styles from '@/styles/layout.module.css';
 import utilStyles from '@/styles/utils.module.css';
-import { INDEX_TITLE, SUBTITLE } from '@/lib/globals';
+import { INDEX_TITLE, BASE_URI, SRC_URL } from '@/lib/globals';
+import pageStyles from '@/styles/page.module.css';
 
 const Layout = ({ children, home }: { children: React.ReactNode; home?: boolean }) => {
     return (
-        <div className={styles.container}>
-            <Head>
-                <link rel="shortcut icon" href="/favicon.ico" />
-                <meta name="description" content={`${SUBTITLE} for ${INDEX_TITLE}`} />
-                {/* <meta
-                    property="og:image"
-                    content={`https://og-image.now.sh/${encodeURI(INDEX_TITLE)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-                /> */}
-                <meta name="og:title" content={INDEX_TITLE} />
-                <meta name="twitter:card" content="summary_large_image" />
-            </Head>
-            <header className={styles.header}>
-                {home ? (
-                    <>
-                        <img
-                            src="/img/profile.png"
-                            className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                            alt={INDEX_TITLE}
-                        />
-                        <h1 className={utilStyles.heading2Xl}>{INDEX_TITLE}</h1>
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <a>
-                                <img
-                                    src="/img/profile.png"
-                                    className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                                    alt={INDEX_TITLE}
-                                />
-                            </a>
-                        </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/">
-                                <a className={utilStyles.colorInherit}>{INDEX_TITLE}</a>
-                            </Link>
-                        </h2>
-                    </>
-                )}
-            </header>
-            <main>{children}</main>
-            {!home && (
-                <div className={styles.backToHome}>
+        <>
+            <div className={pageStyles.main}>
+                <div className={pageStyles.logo}>
                     <Link href="/">
-                        <a>← Back to home</a>
-                    </Link>
+                        <a>{BASE_URI}</a>
+                    </Link>{' '}
+                    (
+                    <a href={SRC_URL} target="_blank" rel="noopener noreferrer">
+                        src
+                    </a>
+                    )
                 </div>
-            )}
-        </div>
+            </div>
+            <div className={styles.container}>
+                <header className={styles.header}>
+                    {home ? (
+                        <>
+                            <img
+                                src="/img/profile.png"
+                                className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                                alt={INDEX_TITLE}
+                            />
+                            <h1 className={utilStyles.headingLg}>{INDEX_TITLE}</h1>
+                        </>
+                    ) : (
+                        <>
+                            <Link href="/">
+                                <a>
+                                    <img
+                                        src="/img/profile.png"
+                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                                        alt={INDEX_TITLE}
+                                    />
+                                </a>
+                            </Link>
+                            <h2 className={utilStyles.headingLg}>
+                                <Link href="/">
+                                    <a className={utilStyles.colorInherit}>{INDEX_TITLE}</a>
+                                </Link>
+                            </h2>
+                        </>
+                    )}
+                </header>
+                <main>{children}</main>
+                {!home && (
+                    <div className={styles.backToHome}>
+                        <Link href="/blog">
+                            <a>← Back to post list</a>
+                        </Link>
+                    </div>
+                )}
+            </div>
+        </>
     );
 };
 

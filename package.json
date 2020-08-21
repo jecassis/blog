@@ -10,33 +10,25 @@
   "main": "index.tsx",
   "repository": "github:jecassis/blog",
   "scripts": {
-    "dev": "next",
+    "dev": "next --port $PORT",
     "build": "next build",
-    "now-build": "next build",
-    "deploy": "now && now alias oops",
+    "deploy": "vercel && vercel alias oops",
+    "lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\" --quiet",
     "pkg": "git add --patch -- package.json && git checkout -- package.json"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.16",
-    "@next/mdx": "^9.5.2",
-    "axios": "^0.19.2",
     "comma-number": "^2.0.1",
-    "date-fns": "^2.11.1",
-    "firebase": "^7.18.0",
-    "firebase-admin": "^9.1.0",
+    "date-fns": "^2.15.0",
+    "firebase": "^7.19.0",
     "gray-matter": "^4.0.2",
     "ms": "^2.1.2",
     "next": "^9.5.2",
-    "next-mdx-remote": "^1.0.0",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-is": "^16.13.1",
-    "react-youtube": "^7.11.1",
-    "remark": "^12.0.0",
+    "remark": "^12.0.1",
     "remark-html": "^12.0.0",
-    "request-ip": "^2.1.3",
-    "styled-components": "^5.1.1"
+    "request-ip": "^2.1.3"
   },
   "devDependencies": {
     "@types/node": "^14.6.0",
@@ -46,7 +38,6 @@
     "@typescript-eslint/parser": "^3.9.1",
     "@vercel/node": "^1.7.4",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-styled-components": "^1.11.1",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -55,13 +46,13 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.7"
+    "typescript": "^4.0.2"
   },
   "engines": {
     "node": "12.x"
   },
   "private": true,
-  "babel": { "presets": ["next/babel"], "plugins": ["styled-components"] },
+  "babel": { "presets": ["next/babel"] },
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
@@ -81,7 +72,12 @@
       "indent": ["error", 4],
       "max-len": "off",
       "no-unused-vars": "warn",
-      "object-curly-newline": ["error", { "ObjectExpression": { "consistent": true }, "ObjectPattern": { "multiline": true }, "ImportDeclaration": "never", "ExportDeclaration": { "multiline": true } }],
+      "object-curly-newline": ["error", {
+        "ObjectExpression": { "multiline": true, "consistent": true },
+        "ObjectPattern": { "multiline": true, "consistent": true },
+        "ImportDeclaration": { "multiline": true, "consistent": true },
+        "ExportDeclaration": { "multiline": true, "consistent": true }
+      }],
       "import/extensions": "off",
       "import/no-extraneous-dependencies": "off",
       "import/no-unresolved": "off",
@@ -93,11 +89,13 @@
       "react/jsx-indent-props": ["error", 4],
       "react/jsx-one-expression-per-line": "off",
       "react/jsx-props-no-spreading": ["error", { "html": "enforce", "custom": "ignore", "exceptions": [] }],
-      "react/no-danger": "off"
+      "react/no-danger": "off",
+      "react/require-default-props": "off"
     }
   },
   "eslintIgnore": [
-    "*.min.js"
+    "/*types/",
+    "/lab/"
   ],
   "prettier": {
     "printWidth": 120,

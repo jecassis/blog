@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
 import { SUBTITLE } from '@/lib/globals';
-import Page from '@/layouts/page';
-import * as data from '../posts.json';
+import Page from '@/components/page';
+import * as data from '../../posts.json';
 
 const PostDiv = styled.div`
     margin-bottom: 10px;

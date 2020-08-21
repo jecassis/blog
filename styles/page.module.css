@@ -1,0 +1,21 @@
+.main {
+    padding: 1rem 3rem;
+}
+
+/* .logo {
+    padding-bottom: 50px;
+} */
+
+.logo a {
+    text-decoration: none;
+}
+
+@media (max-width: 51rem) {
+    .main {
+        padding: 1rem 1rem;
+    }
+
+    /* .logo {
+        padding-bottom: 20px;
+    } */
+}

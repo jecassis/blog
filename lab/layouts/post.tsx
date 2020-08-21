@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import styled from 'styled-components';
-import Page from '@/layouts/page';
+import Page from '@/components/page';
 import Title from '@/components/post/title';
 import Meta from '@/components/post/meta';
-import * as data from '../posts.json';
+import * as data from './posts.json';
 
 const Article = styled.article`
     max-width: 650px;

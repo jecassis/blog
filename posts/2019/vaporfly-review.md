@@ -8,8 +8,7 @@ The shoes I wore for the Los Angeles Marathon was the Nike Vaporfly 4% Flyknit i
 Much has been written about this shoe and the ZoomX foam and carbon fiber plate. Let me add my voice to the noise.
 
 <div class="figure">
-<!-- https://s3-us-west-2.amazonaws.com/oops-blog/vaporfly-4-flyknit-running-shoe-v7G3FB_crop.png -->
-<img src="/img/vaporfly-4-flyknit-running-shoe-v7G3FB_crop.png" style="width:100%;height:auto;vertical-align:middle">
+<img src="https://s3-us-west-2.amazonaws.com/oops-blog/vaporfly-4-flyknit-running-shoe-v7G3FB_crop.png" style="width:100%;height:auto;vertical-align:middle">
 <p class="desc">The profile shot</p>
 </div>
 
@@ -68,16 +67,16 @@ The flyknit upper feels extremely tight when first trying them on.
 
 <div class="row">
 <div class="col" id="pct1">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_019782.JPG" alt="Mile 4" />
+<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_019782.jpg" alt="Mile 4" />
 </div>
 <div class="col" id="pct2">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456791.JPG" alt="Spring" />
+<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456791.jpg" alt="Spring" />
 </div>
 <div class="col" id="pct3">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456792.JPG" alt="Pronation" />
+<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456792.jpg" alt="Pronation" />
 </div>
 <div class="col" id="pct4">
-<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_698144.JPG" alt="Mile 24" />
+<img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_698144.jpg" alt="Mile 24" />
 </div>
 </div>
 
@@ -89,7 +88,7 @@ The most important questions (and answers) I wanted to find out in my experiment
 -   Did they make me run faster? I didn't go slow, so I guess that's good, but far from PR pace. So the verdict is still out on - her I'm getting my 4% energy efficiency.
 -   Would I wear them again? Yes, for races that fit a specific profile, i.e. _flat_ or uphill, good tarmac, and fast.
 -   Do you like their look? Fuck yeah, the Deep Royal Blue/Red Orbit color combination looks awesome!
--   Are they worth $250? Fuck no!!!!!
+-   Are they worth \$250? Fuck no!!!!!
 
 <div class="foot">
 

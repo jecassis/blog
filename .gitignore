@@ -1,5 +1,4 @@
-/node_modules/
 /.next/
-/.now/
-/dist/
+/.vercel/
+/node_modules/
 /service-account.json

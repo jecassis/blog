@@ -3,9 +3,6 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
-// import mdx from '@mdx-js/runtime';
-
-// import mdx1 from 'remark-mdx';
 
 const postsDirectory = join(process.cwd(), 'posts');
 
@@ -19,7 +16,6 @@ const getMatter = (fileName: string, directory: string = '') => {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
     // Combine the data with the id
     return {
         id: `${matterResult.data.date.replace(/-\d{1,2}-\d{1,2}/, '-')}${id}`,

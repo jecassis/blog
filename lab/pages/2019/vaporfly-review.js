@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Post from '../../layouts/post';
+import Post from '../../../layouts/post';
 import { H2, H3 } from '../../components/post/heading';
 import P from '../../components/post/paragraph';
 import UL, { LI } from '../../components/post/bullets-list';
 import Figure, { Image } from '../../components/post/figure';
 import Grid, { Column } from '../../components/post/grid';
 import { Ref, FootNotes, Note } from '../../components/post/footnotes';
-import withViews from '../../lib/withViews';
+import withViews from '../../../lib/withViews';
 
 const Img = styled.img`
     width: 100%;
@@ -92,16 +92,16 @@ export default withViews(({ postId, views }) => (
         <H2 id="pics">Action Shots</H2>
         <Grid>
             <Column id="img1" width={99} height={175}>
-                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_019782.JPG" alt="Mile 4" />
+                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_019782.jpg" alt="Mile 4" />
             </Column>
             <Column id="img2" width={90} height={149}>
-                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456791.JPG" alt="Spring" />
+                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456791.jpg" alt="Spring" />
             </Column>
             <Column id="img3" width={97} height={160}>
-                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456792.JPG" alt="Pronation" />
+                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_456792.jpg" alt="Pronation" />
             </Column>
             <Column id="img4" width={122} height={209}>
-                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_698144.JPG" alt="Mile 24" />
+                <Img src="https://s3-us-west-2.amazonaws.com/oops-blog/3017_698144.jpg" alt="Mile 24" />
             </Column>
         </Grid>
 
