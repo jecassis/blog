@@ -22,7 +22,7 @@ const Index = () => (
                     <a href={STRAVA_URL} target="_blank" rel="noopener noreferrer">
                         Strava
                     </a>
-                    <a href="/api/pgp" download>
+                    <a href="/pgp" download>
                         PGP
                     </a>
                 </nav>

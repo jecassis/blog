@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "routes": [
+    { "src": "/pgp", "methods": ["GET"], "dest": "/api/pgp.ts" },
+    { "src": "/atom", "methods": ["GET"], "dest": "/api/atom.ts" }
+  ],
   "functions": {
     "api/atom.ts": {
       "includeFiles": "posts/**"
