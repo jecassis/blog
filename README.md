@@ -1,6 +1,6 @@
 # blog
 
-This is the blog that powers `oops.now.sh`, built on [next.js](https://zeit.co/blog/next) and deployed to the cloud via [now](https://zeit.co/now).
+This is the blog that powers `oops.now.sh`, built on [Next.js](https://nextjs.org/) and deployed to the cloud via [Vercel](https://vercel.com).
 
 It depends on the [blog-views](https://github.com/jecassis/blog-views) microservice for the realtime views display.
 
@@ -22,7 +22,7 @@ To launch the development server:
 $ yarn dev
 ```
 
-Also:
+To test API functions use instead:
 
 ```console
 $ vercel dev
