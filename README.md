@@ -28,7 +28,7 @@ To test API functions use instead:
 $ vercel dev
 ```
 
-Then head to `http://localhost:3000` on the browser.
+Then navigate to `http://localhost:3000` on a browser.
 
 ### Deployment
 
