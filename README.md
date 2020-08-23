@@ -68,7 +68,6 @@ To preview the application:
 
 ```console
 $ vercel
-Vercel CLI 19.2.0
 ? Inspect: https://vercel.com/<scope>/oops/<unique_id>
 ? Preview: https://oops.<scope>.vercel.app [copied to clipboard]
 ? To deploy to production (oops.vercel.app), run `vercel --prod`
