@@ -34,7 +34,7 @@ const atom = () => `<?xml version="1.0" encoding="utf-8"?>
 ${posts().slice(0, max).map(({ id, date, title, summary }) => `  <entry>
     <id>${id}</id>
     <title>${escapes(title)}</title>
-    <link href="${HOST_URL}${id}"/>
+    <link href="${HOST_URL}post/${id}"/>
     <updated>${date || 'Unknown'}</updated>
     <summary>${escapes(summary)}</summary>
   </entry>`)}
