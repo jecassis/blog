@@ -37,7 +37,7 @@ ${posts().slice(0, max).map(({ id, date, title, summary }) => `  <entry>
     <link href="${HOST_URL}post/${id}"/>
     <updated>${date || 'Unknown'}</updated>
     <summary>${escapes(summary)}</summary>
-  </entry>`)}
+  </entry>`).join('\n')}
 </feed>
 `;
 
