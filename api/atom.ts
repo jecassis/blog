@@ -4,7 +4,7 @@ import { getSortedPostsData as posts } from '../lib/posts';
 
 const max = 10; // Maximum returned posts
 
-const basePropertyOf = (object) => (key) => (object == null ? undefined : object[key]);
+const basePropertyOf = (object: any) => (key: string) => (object == null ? undefined : object[key]);
 
 const htmlEscapes = {
     '&': '&amp;',
@@ -14,7 +14,7 @@ const htmlEscapes = {
     "'": '&#39;',
 };
 
-const escapes = (string) => string.replace(/[&<>"']/g, basePropertyOf(htmlEscapes));
+const escapes = (string: string) => string.replace(/[&<>"']/g, basePropertyOf(htmlEscapes));
 
 const HOST_URL = `https://${BASE_URI}/`;
 
@@ -31,7 +31,7 @@ const atom = () => `<?xml version="1.0" encoding="utf-8"?>
     <name>${AUTHOR_NAME}</name>
     <email>${AUTHOR_EMAIL}</email>
   </author>
-${posts().slice(0, max).map(({ id, date, title, summary }) => `  <entry>
+${posts().slice(0, max).map(({ id, date, title, summary }: { id: string; date: string; title: string; summary: string }) => `  <entry>
     <id>${id}</id>
     <title>${escapes(title)}</title>
     <link href="${HOST_URL}post/${id}"/>
@@ -41,7 +41,7 @@ ${posts().slice(0, max).map(({ id, date, title, summary }) => `  <entry>
 </feed>
 `;
 
-export default (req: NextApiRequest, res: NextApiResponse<string>) => {
+export default (_req: NextApiRequest, res: NextApiResponse<string>) => {
     const body = atom();
     res.setHeader('Content-Type', 'application/atom+xml');
     res.setHeader('Content-Length', Buffer.byteLength(body));

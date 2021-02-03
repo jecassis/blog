@@ -1,9 +1,9 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { INDEX_TITLE, SUBTITLE, BASE_URI } from '@/lib/globals';
 
 export default class Doc extends Document {
-    static async getInitialProps(ctx) {
+    static async getInitialProps(ctx: DocumentContext) {
         const initialProps = await Document.getInitialProps(ctx);
         return { ...initialProps };
     }
@@ -12,7 +12,7 @@ export default class Doc extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta charSet="utf-8" />
+                    {/* <meta charSet="utf-8" /> */}
                     <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self' data:; img-src 'self' data: https://oops-blog.s3-us-west-2.amazonaws.com https://wpassets.trainingpeaks.com; connect-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com https://oops-views.now.sh https://blog-views-ff3e5.firebaseio.com; child-src 'self'; frame-src 'self'; form-action 'self'; prefetch-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; block-all-mixed-content; upgrade-insecure-requests" />
                     <meta name="theme-color" content="#3c4556" />
                     <meta name="application-name" content={INDEX_TITLE} />
