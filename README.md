@@ -2,8 +2,6 @@
 
 This is the blog that powers `oops.now.sh`, built on [Next.js](https://nextjs.org/) and deployed to the cloud via [Vercel](https://vercel.com).
 
-It depends on the [blog-views](https://github.com/jecassis/blog-views) microservice for the realtime views display.
-
 It is forked from the blog of [Guillermo Rauch](https://github.com/rauchg/blog).
 
 ## How to Run

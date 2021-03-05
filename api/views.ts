@@ -1,9 +1,13 @@
-/* eslint-disable no-else-return */
+import { NextApiRequest, NextApiResponse } from 'next';
 import verify from '../lib/verify';
 import { reset, increment } from '../lib/update-views';
 
-export default async (req, res) => {
-    const orig = req.headers.origin;
+type Data = {
+    total: string;
+};
+
+export default async (req: NextApiRequest, res: NextApiResponse<Data | String>) => {
+    const orig = req.headers.origin as string;
     if (/https:\/\/oops(.*\.)?(?:now\.sh|vercel\.app)/.test(orig)) {
         res.setHeader('Access-Control-Allow-Origin', orig);
         res.setHeader('Access-Control-Allow-Methods', 'POST');
@@ -23,14 +27,15 @@ export default async (req, res) => {
     }
 
     if (rst && req.method === 'POST') {
-        const count = parseInt(rst, 10);
+        const count = parseInt(rst as string, 10);
         if (Number.isInteger(count) && Math.sign(count) >= 0) {
-            const { snapshot } = await reset(id, count);
+            const { snapshot } = await reset(id as string, count);
             return res.status(200).json({ total: snapshot.val() });
         }
         return res.status(400).send('`rst` parameter should be positive integer');
-    } else if (req.method === 'POST') {
-        const { snapshot } = await increment(id);
+    }
+    if (req.method === 'POST') {
+        const { snapshot } = await increment(id as string);
         return res.status(200).json({ total: snapshot.val() });
     }
     return res.status(400).send('Bad request');

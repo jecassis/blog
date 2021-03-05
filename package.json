@@ -5,7 +5,7 @@
   "homepage": "https://github.com/jecassis/blog",
   "bugs": "https://github.com/jecassis/blog/issues",
   "license": "MIT",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Kernel Oops <KernelOops@outlook.com> (https://oops.now.sh/)",
   "repository": "github:jecassis/blog",
   "scripts": {
@@ -14,7 +14,7 @@
     "preview": "vercel",
     "deploy": "vercel --prod",
     "alias": "vercel alias oops.<scope>.vercel.app oops.now.sh",
-    "lint": "eslint \"**/*.{js,ts,tsx}\" --quiet",
+    "lint": "eslint \"**/*.{ts,tsx}\" --quiet",
     "lint:check": "npx eslint-config-prettier pages/index.tsx",
     "pretty": "prettier --write \"**/*\" \"!.gitignore\"",
     "pretty:check": "prettier --check \"**/*\" \"!.gitignore\"",

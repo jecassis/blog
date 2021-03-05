@@ -41,7 +41,7 @@ ${posts().slice(0, max).map(({ id, date, title, summary }: { id: string; date: s
 </feed>
 `;
 
-export default (_req: NextApiRequest, res: NextApiResponse<string>) => {
+export default async (_req: NextApiRequest, res: NextApiResponse<string>) => {
     const body = atom();
     res.setHeader('Content-Type', 'application/atom+xml');
     res.setHeader('Content-Length', Buffer.byteLength(body));
