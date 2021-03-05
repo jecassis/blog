@@ -1,2 +1,10 @@
+/.git/
+/.next/
+/.vercel/
+/node_modules/
 /package.json
-/pages/_document.tsx
+/public/*
+!/public/site.webmanifest
+/.prettierignore
+/LICENSE
+/yarn.lock

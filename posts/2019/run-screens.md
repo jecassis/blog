@@ -71,6 +71,7 @@ These are settings that are specific to the "Run Race" profile itself.
 - Power Save Timeout: Extended
 
 ### Global Settings
+
 These are settings that apply to the entire unit.
 
 - Heart Rate Monitor:

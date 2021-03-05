@@ -17,6 +17,7 @@ The pace for a half marathon is too easy and the pace for 5km is too hard.
 Obviously, this prediction assumes that one has trained for the distance.
 
 ## The Predictor Run
+
 Last week I went out on a 400m track and tried to run 25 laps of it as evenly as possible and at a pace I thought I could sustain for about 46-48 minutes.
 
 If you look at the <a href="https://www.strava.com/activities/2212048458/laps" target="_blank" rel="noopener noreferrer">lap split times</a> for that run, all but the last one were around 4:30 per km.

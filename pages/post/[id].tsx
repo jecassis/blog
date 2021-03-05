@@ -22,23 +22,27 @@ const Post = ({
     };
 }) => {
     const [views, setViews] = useState<number>(0);
-    const [highlight, setHighlight] = useState(false);
+    const [highlight, setHighlight] = useState<boolean>(false);
 
     useEffect(() => {
-        fetch(`${DB_URL}/views/${id}.json`)
+        // Register a view asynchronously.
+        fetch(`https://${VIEWS_URI}/views?id=${encodeURIComponent(`${postData.id}`)}`, { method: 'POST' })
             .then((r) => r.json())
-            .then((data) => setViews(data))
-            .catch((err) => console.error('Fetch mount error', err));
+            .then((data) => {
+                setHighlight(true);
+                return data;
+            })
+            .catch((err) => console.error('View save error', err)); // eslint-disable-line no-console
     }, []);
 
     useEffect(() => {
-        setHighlight(true);
-
-        // Register a view asynchronously.
-        fetch(`https://${VIEWS_URI}/?id=${encodeURIComponent(`${postData.id}`)}`, { method: 'POST' })
-            .then((r) => r.json())
-            .catch((err) => console.error('View save error', err));
-    }, [views]);
+        if (views !== 0 || highlight === true) {
+            fetch(`${DB_URL}/views/${id}.json`)
+                .then((r) => r.json())
+                .then((data) => setViews(data))
+                .catch((err) => console.error('Fetch mount error', err)); // eslint-disable-line no-console
+        }
+    }, [highlight]);
 
     return (
         <Layout>
@@ -71,10 +75,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const postData = await getPostData(params.id as string);
+    const postData = await getPostData(params?.id as string);
     return {
         props: {
-            id: params.id,
+            id: params?.id,
             postData,
         },
     };

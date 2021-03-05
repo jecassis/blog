@@ -5,7 +5,7 @@ import { BASE_URI, SRC_URL } from '@/lib/globals';
 // import Meta from '@/lab/components/post/meta';
 import styles from '@/styles/page.module.css';
 
-const Main = ({ children }) => (
+const Main = ({ children }: { children: React.ReactNode }) => (
     <div className={styles.main}>
         <div className={styles.logo}>
             <Link href="/">

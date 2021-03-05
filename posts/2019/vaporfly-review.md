@@ -84,11 +84,11 @@ The flyknit upper feels extremely tight when first trying them on.
 
 The most important questions (and answers) I wanted to find out in my experiment are:
 
--   Do they feel good? Not the biggest fan of the flyknit upper but it didn't hinder my running except for the extreme foot slippage - he downhills.
--   Did they make me run faster? I didn't go slow, so I guess that's good, but far from PR pace. So the verdict is still out on - her I'm getting my 4% energy efficiency.
--   Would I wear them again? Yes, for races that fit a specific profile, i.e. _flat_ or uphill, good tarmac, and fast.
--   Do you like their look? Fuck yeah, the Deep Royal Blue/Red Orbit color combination looks awesome!
--   Are they worth \$250? Fuck no!!!!!
+- Do they feel good? Not the biggest fan of the flyknit upper but it didn't hinder my running except for the extreme foot slippage - he downhills.
+- Did they make me run faster? I didn't go slow, so I guess that's good, but far from PR pace. So the verdict is still out on - her I'm getting my 4% energy efficiency.
+- Would I wear them again? Yes, for races that fit a specific profile, i.e. _flat_ or uphill, good tarmac, and fast.
+- Do you like their look? Fuck yeah, the Deep Royal Blue/Red Orbit color combination looks awesome!
+- Are they worth \$250? Fuck no!!!!!
 
 <div class="foot">
 

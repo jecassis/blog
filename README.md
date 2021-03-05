@@ -69,7 +69,7 @@ To preview the application:
 ```console
 $ vercel
 ? Inspect: https://vercel.com/<scope>/oops/<unique_id>
-? Preview: https://oops.<scope>.vercel.app [copied to clipboard]
+? Preview: https://oops-<scope>.vercel.app [copied to clipboard]
 ? To deploy to production (oops.vercel.app), run `vercel --prod`
 ```
 
@@ -78,8 +78,8 @@ To deploy into production:
 ```console
 $ vercel --prod
 ? Inspect: https://vercel.com/<scope>/oops/<unique_id>
-? Production: https://oops.<scope>.vercel.app [copied to clipboard]
-$ vercel alias oops.<scope>.vercel.app oops.now.sh
+? Production: https://oops-<scope>.vercel.app [copied to clipboard]
+$ vercel alias oops-<scope>.vercel.app oops.now.sh
 > Assigning alias oops.now.sh to deployment oops-<unique_id>.vercel.app
-> Success! https://oops.now.sh now points to https://oops-<unique_id>.vercel.app
+> Success! https://oops.now.sh now points to https://oops-<unique_id>-<scope>.vercel.app
 ```

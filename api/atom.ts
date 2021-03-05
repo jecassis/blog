@@ -4,7 +4,7 @@ import { getSortedPostsData as posts } from '../lib/posts';
 
 const max = 10; // Maximum returned posts
 
-const basePropertyOf = (object) => (key) => (object == null ? undefined : object[key]);
+const basePropertyOf = (object: any) => (key: string) => (object == null ? undefined : object[key]);
 
 const htmlEscapes = {
     '&': '&amp;',
@@ -14,7 +14,7 @@ const htmlEscapes = {
     "'": '&#39;',
 };
 
-const escapes = (string) => string.replace(/[&<>"']/g, basePropertyOf(htmlEscapes));
+const escapes = (string: string) => string.replace(/[&<>"']/g, basePropertyOf(htmlEscapes));
 
 const HOST_URL = `https://${BASE_URI}/`;
 
@@ -41,7 +41,7 @@ ${posts().slice(0, max).map(({ id, date, title, summary }) => `  <entry>
 </feed>
 `;
 
-export default (req: NextApiRequest, res: NextApiResponse<string>) => {
+export default (_req: NextApiRequest, res: NextApiResponse<string>) => {
     const body = atom();
     res.setHeader('Content-Type', 'application/atom+xml');
     res.setHeader('Content-Length', Buffer.byteLength(body));

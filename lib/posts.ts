@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
@@ -23,7 +24,7 @@ const getMatter = (fileName: string, directory: string = '') => {
     };
 };
 
-const getAllPostsData = () => {
+const getAllPostsData = (): any[] => {
     const fileNames = fs.readdirSync(postsDirectory());
     const allPostsData = fileNames.map((fileName) => {
         const fullPath = join(postsDirectory(), fileName);
@@ -38,10 +39,10 @@ const getAllPostsData = () => {
     });
 
     // Flatten posts
-    return [].concat(...allPostsData);
+    return ([] as any[]).concat(...allPostsData);
 };
 
-export const getSortedPostsData = () => {
+export const getSortedPostsData = (): any[] => {
     // Sort posts by date
     return getAllPostsData().sort((a, b) => {
         if (a.date < b.date) {

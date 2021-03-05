@@ -1,9 +1,9 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { INDEX_TITLE, SUBTITLE, BASE_URI } from '@/lib/globals';
 
 export default class Doc extends Document {
-    static async getInitialProps(ctx) {
+    static async getInitialProps(ctx: DocumentContext) {
         const initialProps = await Document.getInitialProps(ctx);
         return { ...initialProps };
     }
@@ -12,8 +12,8 @@ export default class Doc extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta charSet="utf-8" />
-                    <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self' data:; img-src 'self' data: https://oops-blog.s3-us-west-2.amazonaws.com https://wpassets.trainingpeaks.com; connect-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com https://oops-views.now.sh https://blog-views-ff3e5.firebaseio.com; child-src 'self'; frame-src 'self'; form-action 'self'; prefetch-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; block-all-mixed-content; upgrade-insecure-requests" />
+                    {/* prettier-ignore */}
+                    <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self' data:; img-src 'self' data: https://oops-blog.s3-us-west-2.amazonaws.com https://wpassets.trainingpeaks.com; connect-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com https://oops.now.sh https://blog-views-ff3e5.firebaseio.com; child-src 'self'; frame-src 'self'; form-action 'self'; prefetch-src 'self' https://oops-blog.s3-us-west-2.amazonaws.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; block-all-mixed-content; upgrade-insecure-requests" />
                     <meta name="theme-color" content="#3c4556" />
                     <meta name="application-name" content={INDEX_TITLE} />
                     <meta name="apple-mobile-web-app-title" content="Oops" />
@@ -40,7 +40,7 @@ export default class Doc extends Document {
                     <meta property="og:description" content={`${SUBTITLE} for ${INDEX_TITLE}`} />
                     <meta property="og:locale" content="en_US" />
                     <meta property="og:site_name" content={INDEX_TITLE} />
-                    {/* <meta property="og:image" content={`https://og-image.now.sh/${encodeURI(INDEX_TITLE)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`} /> */}
+                    { /* prettier-ignore */ /* <meta property="og:image" content={`https://og-image.now.sh/${encodeURI(INDEX_TITLE)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`} /> */}
                     <link href="https://oops-blog.s3-us-west-2.amazonaws.com" rel="preconnect" crossOrigin="anonymous" />
                     {/* <link href="https://oops-blog.s3-us-west-2.amazonaws.com/AvenirLTStd-Light.woff2" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
                     {/* <link href="https://oops-blog.s3-us-west-2.amazonaws.com/AvenirLTStd-Roman.woff2" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}

@@ -1,8 +1,8 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "/pgp", "methods": ["GET"], "dest": "/api/pgp.ts" },
-    { "src": "/atom", "methods": ["GET"], "dest": "/api/atom.ts" }
+  "rewrites": [
+    { "source": "/pgp", "destination": "/api/pgp" },
+    { "source": "/atom", "destination": "/api/atom" },
+    { "source": "/views", "destination": "/api/views" }
   ],
   "functions": {
     "api/atom.ts": {
