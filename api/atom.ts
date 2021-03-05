@@ -31,7 +31,7 @@ const atom = () => `<?xml version="1.0" encoding="utf-8"?>
     <name>${AUTHOR_NAME}</name>
     <email>${AUTHOR_EMAIL}</email>
   </author>
-${posts().slice(0, max).map(({ id, date, title, summary }) => `  <entry>
+${posts().slice(0, max).map(({ id, date, title, summary }: { id: string; date: string; title: string; summary: string }) => `  <entry>
     <id>${id}</id>
     <title>${escapes(title)}</title>
     <link href="${HOST_URL}post/${id}"/>

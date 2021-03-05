@@ -1,5 +1,6 @@
 /node_modules/
 /.prettierignore
 /.vercelignore
+/scripts/
 /LICENSE
 /README.md

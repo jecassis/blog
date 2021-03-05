@@ -1,1 +1,4 @@
-declare module 'comma-number';
+declare module 'comma-number' {
+    let format: any;
+    export default format;
+}

@@ -4,7 +4,6 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/layouts/*": ["layouts/*"],
-      "@/lab/*": ["lab/*"],
       "@/lib/*": ["lib/*"],
       "@/styles/*": ["styles/*"]
     },
@@ -28,6 +27,6 @@
     "strict": true,
     "target": "esnext"
   },
-  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"]
 }

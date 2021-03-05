@@ -46,8 +46,8 @@ We sent an email to <email>. Please follow the steps provided inside it and make
 √ Email confirmed
 Congratulations! You are now logged in.
 $ vercel
-? Set up and deploy “/path/to/blog”? [Y/n] y
-? Which scope do you want to deploy to? <scope>
+? Set up and develop “/path/to/blog”? [Y/n] y
+? Which scope should contain your project? <scope>
 ? Found project <scope>/<other>”. Link to it? [Y/n] n
 ? Link to different existing project? [Y/n] n
 ? What’s your project’s name? oops

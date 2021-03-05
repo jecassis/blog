@@ -5,6 +5,8 @@
 /package.json
 /public/*
 !/public/site.webmanifest
+/scripts/
 /.prettierignore
+/.vercelignore
 /LICENSE
 /yarn.lock

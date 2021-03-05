@@ -32,36 +32,30 @@ const getAllPostsData = (): any[] => {
             // Get file names under /posts/<year>
             const nested = fs.readdirSync(fullPath);
             return nested.map((fn) => getMatter(fn, fileName));
-        } else {
-            // Get file names under /posts
-            return getMatter(fileName);
         }
+        // Get file names under /posts
+        return getMatter(fileName);
     });
 
     // Flatten posts
     return ([] as any[]).concat(...allPostsData);
 };
 
-export const getSortedPostsData = (): any[] => {
+export const getSortedPostsData = (): any[] =>
     // Sort posts by date
-    return getAllPostsData().sort((a, b) => {
+    getAllPostsData().sort((a, b) => {
         if (a.date < b.date) {
             return 1;
-        } else {
-            return -1;
         }
+        return -1;
     });
-};
 
-export const getAllPostIds = () => {
-    return getAllPostsData().map((post) => {
-        return {
-            params: {
-                id: post.id,
-            },
-        };
-    });
-};
+export const getAllPostIds = () =>
+    getAllPostsData().map((post) => ({
+        params: {
+            id: post.id,
+        },
+    }));
 
 export const getPostData = async (id: string) => {
     const year = id.match(/(\d{4})-(.*?)$/);
